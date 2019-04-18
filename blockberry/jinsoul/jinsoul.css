@@ -9,11 +9,11 @@
     font-size: 45px;
   }
   #main{
-    width: 754px;
+    width: 900px;
     height: 141px;
     position: absolute;
     top: 350px;
-    left: 130px;
+    left: 45px;
   }
   #menu{
     width:820px;
@@ -51,7 +51,7 @@
   #main{
     position: absolute;
     top: 350px;
-    left: 130px;
+    left: 45px;
   }
   #menu{
     position: absolute;
@@ -74,7 +74,7 @@
   #main{
     position: absolute;
     top:57%;
-    left:15%;
+    left:7%;
   }
   #menu{
     position: absolute;
@@ -103,7 +103,7 @@
     #main{
       position: absolute;
       top: 75%;
-      left: 20%;
+      left: 17%;
     }
     #menu{
       position: absolute;
