@@ -1,4 +1,10 @@
+@media screen and (min-width: 0px) and (max-width: 530px){
+  #fix_menu{
+    display: none;
+  }
+}
 *{margin: 0; padding: 0; font-family: 'Ubuntu';}
+
 
 #header a{
   margin: 20px 0px 0 30px;
