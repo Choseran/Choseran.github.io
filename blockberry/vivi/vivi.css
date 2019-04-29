@@ -44,13 +44,13 @@
     width: 180px;
     height: 180px;
     position: absolute;
-    left: 210px;
+    left: 209px;
   }
   #one #theone #love{
     width: 180px;
     position: relative;
     top: 50px;
-    left: 5px;
+    left: 4px;
   }
   #one #theone #love p,h4{
     font-size: 12px;
@@ -84,7 +84,7 @@
     width: 200px;
   }
   #last .fig figcaption p b{
-    font-size: 14px;
+    font-size: 12px;
   }
   #last .m_hide{
     display: none;
