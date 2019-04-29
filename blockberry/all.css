@@ -1,6 +1,5 @@
 @media screen and (min-width: 0px) and (max-width: 530px){
-  html{
-    width: 100%;
+  body{
     overflow-x: hidden;
   }
   #bg{
@@ -87,6 +86,108 @@
   }
   #fix_menu{
     display: none;
+  }
+}
+@media screen and (min-width:531px) and (max-width: 930px){
+  #bg {
+    width: 1040px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  #main h1{
+    font-size: 45px;
+  }
+  #menu{
+    width:820px;
+    height:43px;
+  }
+  .icon{
+    position: absolute;
+    top: 0px;
+    left: 810px;
+  }
+  #header{
+    width: 930px;
+    display: inline-block;
+    float: left;
+  }
+  #main2{
+    width: 1050px;
+    margin: auto;
+    position: relative;
+  }
+  #footer{
+    width: 1068px;
+  }
+}
+@media screen and (min-width: 931px) and (max-width: 1027px){
+  #bg {
+    width: 1040px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  #main h1{
+    font-size: 45px;
+  }
+  #menu{
+    position: absolute;
+    left: 216px;
+  }
+  #footer{
+    width: 1068px;
+  }
+}
+@media screen and (min-width: 1028px) and (max-width: 1199px){
+  #bg {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  #main h1{
+    font-size: 45px;
+  }
+  #menu{
+    position: absolute;
+    left: 21%;
+  }
+  #main2{
+    width: 1050px;
+    margin: auto;
+    position: relative;
+  }
+  #footer{
+    position: relative;
+  }
+  #more{
+    position: relative;
+    left: 1%;
+  }
+}
+@media screen and (min-width:1200px){
+  #bg {
+    width: 100%;
+  }
+  #main h1{
+    font-size: 45px;
+  }
+  #menu{
+    position: absolute;
+    left: 21%;
+  }
+  #main2{
+    width: 1050px;
+    margin: auto;
+    position: relative;
+  }
+  #footer{
+    position: relative;
+  }
+  #more{
+    position: relative;
+    left: 1%;
   }
 }
 *{margin: 0; padding: 0; font-family: 'Ubuntu';}

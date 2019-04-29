@@ -13,15 +13,6 @@
   }
 }
 @media screen and (min-width:531px) and (max-width: 930px){
-  #bg {
-    width: 1040px;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-  #main h1{
-    font-size: 45px;
-  }
   #main{
     width: 900px;
     height: 141px;
@@ -29,110 +20,25 @@
     top: 350px;
     left: 45px;
   }
-  #menu{
-    width:820px;
-    height:43px;
-  }
-  .icon{
-    position: absolute;
-    top: 0px;
-    left: 810px;
-  }
-  #header{
-    width: 930px;
-    display: inline-block;
-    float: left;
-  }
-  #main2{
-    width: 1050px;
-    margin: auto;
-    position: relative;
-  }
-  #footer{
-    width: 1068px;
-  }
 }
 @media screen and (min-width: 931px) and (max-width: 1027px){
-  #bg {
-    width: 1040px;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-  #main h1{
-    font-size: 45px;
-  }
   #main{
     position: absolute;
     top: 350px;
     left: 45px;
   }
-  #menu{
-    position: absolute;
-    left: 216px;
-  }
-  #footer{
-    width: 1068px;
-  }
 }
 @media screen and (min-width:1028px) and (max-width:1199px){
-  #bg {
-    width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-  #main h1{
-    font-size: 45px;
-  }
   #main{
     position: absolute;
     top:47%;
     left:7%;
   }
-  #menu{
-    position: absolute;
-    left: 21%;
-  }
-  #main2{
-    width: 1050px;
-    margin: auto;
-    position: relative;
-  }
-  #footer{
-    position: relative;
-  }
-  #more{
-    position: relative;
-    left: 1%;
-  }
 }
 @media screen and (min-width:1200px){
-    #bg {
-      width: 100%;
-    }
-    #main h1{
-      font-size: 45px;
-    }
     #main{
       position: absolute;
       top: 55%;
       left: 17%;
-    }
-    #menu{
-      position: absolute;
-      left: 21%;
-    }
-    #main2{
-      width: 1050px;
-      margin: auto;
-      position: relative;
-    }
-    #footer{
-      position: relative;
-    }
-    #more{
-      position: relative;
-      left: 1%;
     }
   }
