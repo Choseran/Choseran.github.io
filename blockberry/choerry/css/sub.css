@@ -1,0 +1,15 @@
+#header {
+  background-color: #6a3b87;
+}
+.title{
+  border-bottom: 2px solid #6a3b87;
+}
+#pagination-wrap ul li.active {
+  box-shadow: rgba(#6a3b87, 0.7) 1px 1px 0px;
+}
+article>div{
+  border-top: 1px solid #6a3b87;
+}
+#footer{
+  background-color: #6a3b87;
+}

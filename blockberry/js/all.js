@@ -34,8 +34,11 @@ $(document).ready(function(){
     });
     $("#sub_menu").click(function(){
       $("#hidden_ham").toggle(500);
-      $("#sub_menu>span").toggleClass('classname','addOrRemove');
+      $("#sub_menu>span").toggleClass('classname');
       $("#sub_menu>span").css('background','white');
       $(".classname").css('background','black');
+      $("#sub_menu").toggleClass('black');
+      $("#sub_menu").css('position','absolute');
+      $(".black").css('position','fixed');
     });
   });
