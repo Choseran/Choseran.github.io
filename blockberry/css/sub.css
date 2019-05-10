@@ -1,4 +1,7 @@
 * {margin: 0; padding: 0; font-family: 'Ubuntu';}
+body{
+  overflow-x: hidden;
+}
 
 #header {
   font-size: 17px;
@@ -82,7 +85,7 @@ a {
   left: 180px;
 }
 #info pre{
-  color: #bebebe;
+  color: #fff;
   margin: 0 0 0 13px;
 }
 #love pre{

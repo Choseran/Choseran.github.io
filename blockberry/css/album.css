@@ -32,7 +32,7 @@
 #slider-wrap ul#slider li>div {
   position: absolute;
   top: 80%;
-  left: 35px;
+  right: 35px;
 }
 
 #slider-wrap ul#slider li>div h3 {
@@ -88,7 +88,7 @@
 
 #counter {
   top: 30px;
-  right: 35px;
+  left: 35px;
   width: auto;
   position: absolute;
 }
@@ -167,6 +167,11 @@ article>div>div>ol{
 article #xx{
   height: 250px;
 }
+.cd{
+  color: #ccc;
+}
+
+
 @media screen and (min-width: 0px) and (max-width: 499px) {
   #wrapper {
     width: 310px;
@@ -217,5 +222,13 @@ article #xx{
 @media screen and (min-width: 500px) and (max-width: 650px) {
   article{
     width: 500px;
+  }
+}
+@media screen and (min-width: 651px) {
+  .cd{
+    width: 316px;
+  }
+  .long{
+    width: 320px;
   }
 }

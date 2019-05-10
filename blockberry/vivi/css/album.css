@@ -1,0 +1,6 @@
+#pagination-wrap ul li.active {
+  box-shadow: rgba(#f5a0b3, 0.7) 1px 1px 0px;
+}
+article>div{
+  border-top: 1px solid #f5a0b3;
+}
