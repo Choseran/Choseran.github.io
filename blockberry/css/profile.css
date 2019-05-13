@@ -27,23 +27,26 @@ article>div>div.profile_text>p>b.profile_gray{
 @media screen and (min-width: 0px) and (max-width: 499px) {
   article{
     width: 90%;
-    margin: 0 auto;
   }
   article>div#profile{
     position: relative;
-    margin: 100px 0;
+    height: 600px;
   }
   article>div>img.profile_pic{
-    width: 45%;
+    width: 90%;
   }
   article>div>div.profile_text{
-    width: 45%;
+    width: 90%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
   }
   article>div>div.profile_text>p>b{
-    font-size: 15px;
-  }
-  article>div>div.profile_text>p>b.profile_gray{
-    font-size: 10px;
+    font-size: 20px;
     padding-right: 3px;
+  }
+  article>div>div.profile_text>p, article>div>div.profile_text>p>b.profile_gray{
+    font-size: 14px;
   }
 }
