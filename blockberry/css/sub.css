@@ -200,6 +200,10 @@ a {
     width: 100%;
     height: 165px;
   }
+  #footer #tv{
+    position: absolute;
+    left: 20px;
+  }
   #footer #tv #info>ul a, #footer #tv #info pre{
     display: none;
   }
