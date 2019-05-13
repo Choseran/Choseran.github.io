@@ -6,54 +6,57 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Album</title>
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link rel="shortcut icon" href="../icon/icon.ico">
-  <link rel="icon" href="../icon/icon_32.ico" sizes="32x32">
-  <link rel="icon" href="../icon/icon_48.ico" sizes="48x48">
-  <link rel="icon" href="../icon/icon_72.ico" sizes="72x72">
-  <link rel="icon" href="../icon/icon_96.ico" sizes="96x96">
-  <link rel="icon" href="../icon/icon_144.ico" sizes="144x144">
-  <link rel="icon" href="../icon/icon_192.ico" sizes="192x192">
+  <link rel="shortcut icon" href="icon/icon.ico">
+  <link rel="icon" href="icon/icon_32.ico" sizes="32x32">
+  <link rel="icon" href="icon/icon_48.ico" sizes="48x48">
+  <link rel="icon" href="icon/icon_72.ico" sizes="72x72">
+  <link rel="icon" href="icon/icon_96.ico" sizes="96x96">
+  <link rel="icon" href="icon/icon_144.ico" sizes="144x144">
+  <link rel="icon" href="icon/icon_192.ico" sizes="192x192">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script type="text/javascript" src="../../js/sub.js"></script>
-  <script type="text/javascript" src="../../js/album.js"></script>
-  <link rel="stylesheet" href="../../css/sub.css">
-  <link rel="stylesheet" href="../../css/album.css">
+  <script type="text/javascript" src="../js/sub.js"></script>
+  <script type="text/javascript" src="../js/album.js"></script>
   <link rel="stylesheet" href="../css/sub.css">
   <link rel="stylesheet" href="../css/album.css">
+  <link rel="stylesheet" href="css/sub.css">
+  <link rel="stylesheet" href="css/album.css">
 </head>
 <style media="screen">
-  article>div>div#max{
-    height: 230px;
+  #pagination-wrap ul li.active {
+    box-shadow: rgba(#f37020, 0.7) 1px 1px 0px;
+  }
+  article>div{
+    border-top: 1px solid #f37020;
   }
   @media screen and (min-width: 0px) and (max-width: 499px) {
-    article>div>div#mix{
-      height: 220px;
+    article #choerry{
+      height: 140px;
     }
-    article>div>div#max{
-      height: 380px;
+    article>div>div#plus{
+      height: 140px;
     }
   }
 </style>
 <body>
   <header id="header">
     <div id="origin">
-      <a href="http://choseran.github.io/blockberry/heejin" target="blank"><b>HEEJIN</b></a>
+      <a href="http://choseran.github.io/blockberry/yeojin" target="blank"><b>YEOJIN</b></a>
     </div>
     <div id="menu">
       <ul>
-        <a href="http://choseran.github.io/blockberry/heejin/profile">
+        <a href="http://choseran.github.io/blockberry/yeojin/profile">
           <li>Profile</li>
         </a>
         <a href="#">
           <li>Album</li>
         </a>
-        <a href="http://choseran.github.io/blockberry/heejin/concert">
+        <a href="http://choseran.github.io/blockberry/yeojin/concert">
           <li>Concert</li>
         </a>
-        <a href="http://choseran.github.io/blockberry/heejin/gallery">
+        <a href="http://choseran.github.io/blockberry/yeojin/gallery">
           <li>Gallery</li>
         </a>
-        <a href="http://choseran.github.io/blockberry/heejin/officialsns">
+        <a href="http://choseran.github.io/blockberry/yeojin/officialsns">
           <li>Official SNS</li>
         </a>
       </ul>
@@ -66,19 +69,19 @@
   </header>
   <div id="hidden_ham">
     <ul>
-      <a href="http://choseran.github.io/blockberry/heejin/profile">
+      <a href="http://choseran.github.io/blockberry/yeojin/profile">
         <li>Profile</li>
       </a>
       <a href="#">
         <li>Album</li>
       </a>
-      <a href="http://choseran.github.io/blockberry/heejin/concert">
+      <a href="http://choseran.github.io/blockberry/yeojin/concert">
         <li>Concert</li>
       </a>
-      <a href="http://choseran.github.io/blockberry/heejin/gallery">
+      <a href="http://choseran.github.io/blockberry/yeojin/gallery">
         <li>Gallery</li>
       </a>
-      <a href="http://choseran.github.io/blockberry/heejin/officialsns">
+      <a href="http://choseran.github.io/blockberry/yeojin/officialsns">
         <li>Official SNS</li>
       </a>
     </ul>
@@ -91,24 +94,10 @@
       <ul id="slider">
         <li>
           <div>
-            <h3>HeeJin</h3>
+            <h3>YeoJin</h3>
             <span>이달의 소녀</span>
           </div>
-          <img src="https://image.bugsm.co.kr/album/images/1000/200589/20058960.jpg">
-        </li>
-        <li>
-          <div>
-            <h3>Love & Live</h3>
-            <span>이달의 소녀 1/3</span>
-          </div>
-          <img src="https://image.bugsm.co.kr/album/images/1000/200864/20086437.jpg">
-        </li>
-        <li>
-          <div>
-            <h3>Love & Evil</h3>
-            <span>이달의 소녀 1/3</span>
-          </div>
-          <img src="https://image.bugsm.co.kr/album/images/1000/200951/20095170.jpg">
+          <img src="https://image.bugsm.co.kr/album/images/1000/200773/20077386.jpg">
         </li>
         <li>
           <div>
@@ -139,38 +128,11 @@
   <article>
     <div class="list">
       <div id="choerry">
-        <img src="https://image.bugsm.co.kr/album/images/1000/200589/20058960.jpg">
+        <img src="https://image.bugsm.co.kr/album/images/1000/200773/20077386.jpg">
         <ol>
-          <b><li>ViViD (희진)</li></b>
-          <li>ViViD (Acoustic Mix) (희진)</li>
-        </ol>
-      </div>
-    </div>
-    <div class="list">
-      <div id="mix">
-        <img src="https://image.bugsm.co.kr/album/images/1000/200864/20086437.jpg">
-        <ol>
-          <li>Into the New Heart (Guitar by 김정모 of TRAX)</li>
-          <b><li>지금, 좋아해 (Love & Live)</li></b>
-          <li>You and Me Together</li>
-          <li>Fairy Tale</li>
-          <li>3월을 기다려 (Valentine Girl)</li>
-        </ol>
-      </div>
-    </div>
-    <div class="list">
-      <div id="max">
-        <img src="https://image.bugsm.co.kr/album/images/1000/200951/20095170.jpg">
-        <ol>
-          <li>Love & Evil</li>
-          <b><li>알 수 없는 비밀 (Sonatine)</li></b>
-          <li>비의 목소리 51db (Rain 51db)</li>
-          <li>지금, 좋아해 (Love & Live)</li>
-          <li>You And Me Together</li>
-          <li>Fairy Tale</li>
-          <li>3월을 기다려 (Valentine Girl)</li>
-          <li class="cd">지금, 좋아해 (Love & Live) (Remix) (CD Only)</li>
-          <li class="cd">You and Me Together (Remix) (CD Only)</li>
+          <b><li>키스는 다음에 (여진)</li></b>
+          <b><li>My Sunday (희진, 현진)</li></b>
+          <b><li>My Melody (하슬, 여진)</li></b>
         </ol>
       </div>
     </div>
@@ -209,7 +171,7 @@
   </article>
   <footer id="footer">
     <section id="tv">
-      <img id="logo" src="../../img/logo_sub.png">
+      <img id="logo" src="../img/logo_sub.png">
       <div id="info">
         <ul>
           <a href="#"><li><b>회사소개&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>ㅣ</li></a>
@@ -219,11 +181,11 @@
           <li>
             <div id="select">
               <select id="member" onchange="if(this.value) window.open(this.value);">
-                <option value="#">희진</option>
+                <option value="#">여진</option>
                 <option value="http://choseran.github.io/blockberry/">Member</option>
+                <option value="http://choseran.github.io/blockberry/heejin">희진</option>
                 <option value="http://choseran.github.io/blockberry/hyunjin">현진</option>
                 <option value="http://choseran.github.io/blockberry/haseul">하슬</option>
-                <option value="http://choseran.github.io/blockberry/yeojin">여진</option>
                 <option value="http://choseran.github.io/blockberry/vivi">비비</option>
                 <option value="http://choseran.github.io/blockberry/kimlip">김립</option>
                 <option value="http://choseran.github.io/blockberry/jinsoul">진솔</option>
