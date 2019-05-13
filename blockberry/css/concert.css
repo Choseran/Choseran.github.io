@@ -1,0 +1,36 @@
+article{
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+  height: 54.8vh;
+}
+article>span{
+  display: inline-block;
+  width: 20%;
+  margin: 0 20px 0 20px;
+}
+article>span>img, article>span>div{
+  width: 100%;
+}
+article>span>div>a{
+  font-weight: bold;
+}
+article>span>div>p{
+  color: #aaa
+}
+article>span>div>p>b{
+  font-weight: 400;
+}
+@media screen and (min-width: 0px) and (max-width: 499px) {
+  article{
+    height: 700px;
+  }
+  article>span{
+    display: inline-block;
+    width: 40%;
+    margin: 50px 5px 0 5px;
+  }
+  article>span>img, article>span>div{
+    width: 100%;
+  }
+}

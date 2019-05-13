@@ -1,6 +1,7 @@
 article{
   width: 720px;
   margin: 0 auto;
+  height: 49.5vh;
 }
 article>div#profile{
   position: relative;
