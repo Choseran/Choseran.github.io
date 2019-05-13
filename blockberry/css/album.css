@@ -88,7 +88,7 @@
 
 #counter {
   top: 30px;
-  left: 17px;
+  left: 30px;
   width: auto;
   position: absolute;
 }
@@ -202,7 +202,7 @@ article #xx{
   }
   #counter {
     top: 10px;
-    right: 10px;
+    left: 13px;
     width: auto;
     position: absolute;
   }
