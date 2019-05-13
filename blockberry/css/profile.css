@@ -31,12 +31,14 @@ article>div>div.profile_text>p>b.profile_gray{
   article>div#profile{
     position: relative;
     height: 600px;
+    text-align: center;
   }
   article>div>img.profile_pic{
     width: 90%;
   }
   article>div>div.profile_text{
-    width: 90%;
+    text-align: left;
+    width: 95%;
     position: absolute;
     top: 55%;
     left: 50%;
