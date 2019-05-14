@@ -11,6 +11,19 @@ article>span{
 article>span>a>p{
   width: 230px;
 }
+@media screen and (min-width: 0px) and (max-width:499px) {
+  article{
+    margin: 100px auto;
+    text-align: center;
+  }
+  article>span{
+    width: 80%;
+    height: 220px;
+  }
+  article>span>a>img{
+    width: 150px;
+  }
+}
 @media screen and (min-width: 1400px) {
   article{
     width: 1200px;
