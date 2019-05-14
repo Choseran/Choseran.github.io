@@ -1,7 +1,6 @@
 article{
   width: 720px;
   margin: 0 auto;
-  height: 49.5vh;
 }
 article>div#profile{
   position: relative;
@@ -51,5 +50,10 @@ article>div>div.profile_text>p>b.profile_gray{
   }
   article>div>div.profile_text>p, article>div>div.profile_text>p>b.profile_gray{
     font-size: 14px;
+  }
+}
+@media screen and (min-width: 500px) {
+  article{
+    height: 49.5vh;
   }
 }
