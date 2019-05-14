@@ -8,11 +8,8 @@
   #one #theone #love p,h4{
     font-size: 12px;
   }
-  #last .fig figcaption p b{
-    font-size: 12px;
-  }
 }
-@media screen and (min-width:531px) and (max-width: 930px){
+@media screen and (min-width: 531px) and (max-width: 930px){
   #main{
     width: 754px;
     height: 141px;
@@ -31,7 +28,7 @@
 @media screen and (min-width:1028px) and (max-width:1199px){
   #main{
     position: absolute;
-    top:46%;
+    top:47%;
     left:15%;
   }
 }

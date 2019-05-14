@@ -3,29 +3,26 @@
     width: 180px;
     height: 180px;
     position: absolute;
-    left: 209px;
+    left: 210px;
   }
   #one #theone #love p,h4{
     font-size: 12px;
   }
-  #last .fig figcaption p b{
-    font-size: 12px;
-  }
 }
-@media screen and (min-width: 531px) and (max-width: 930px){
+@media screen and (min-width:531px) and (max-width: 930px){
   #main{
-    width: 900px;
+    width: 754px;
     height: 141px;
     position: absolute;
     top: 350px;
-    left: 70px;
+    left: 130px;
   }
 }
 @media screen and (min-width: 931px) and (max-width: 1027px){
   #main{
     position: absolute;
     top: 350px;
-    left: 70px;
+    left: 130px;
   }
 }
 @media screen and (min-width:1028px) and (max-width:1199px){

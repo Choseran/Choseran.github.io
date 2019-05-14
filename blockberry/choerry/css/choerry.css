@@ -8,37 +8,36 @@
   #one #theone #love p,h4{
     font-size: 12px;
   }
-  #last .fig figcaption p b{
-    font-size: 12px;
-  }
 }
-@media screen and (min-width:531px) and (max-width: 930px){
+@media screen and (min-width: 531px) and (max-width: 930px){
   #main{
-    width: 754px;
+    width: 950px;
     height: 141px;
     position: absolute;
     top: 350px;
-    left: 130px;
+    left: 50px;
   }
 }
 @media screen and (min-width: 931px) and (max-width: 1027px){
   #main{
+    width: 950px;
+    height: 141px;
     position: absolute;
     top: 350px;
-    left: 130px;
+    left: 50px;
   }
 }
-@media screen and (min-width:1028px) and (max-width:1199px){
+@media screen and (min-width: 1028px) and (max-width: 1199px){
   #main{
     position: absolute;
     top:47%;
-    left:15%;
+    left:7%;
   }
 }
 @media screen and (min-width:1200px){
     #main{
       position: absolute;
-      top: 55%;
-      left: 20%;
+      top:55%;
+      left: 10%;
     }
   }
