@@ -38,9 +38,6 @@ body{
   .text h4{
     font-size: 10px;
   }
-  #all{
-    width: 300px;
-  }
   #all div.box{
     width: 22%;
   }
