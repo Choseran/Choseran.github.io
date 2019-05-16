@@ -2,11 +2,15 @@ $(document).ready(function(){
     console.log('작동됩니다');
     var sub_bt = document.getElementsByClassName('sub_bt');
     var position;
+
+    //fig more+
     $("#more").click(function(){
       $(".hide").show(500);
       $(".hide").css('display','inline-block');
       $(this).hide();
     });
+
+    //pc오른쪽 fix버튼
     $(sub_bt[0]).click(function() {
         position = $("header").offset();
         $("html").stop().animate({scrollTop:position.top},500);
@@ -27,6 +31,8 @@ $(document).ready(function(){
       $("html").stop().animate({scrollTop:position.top},500);
       console.log(position);
     });
+
+    //햄버거 메뉴
     $(function() {
       $('#sub_menu').click(function() {
         $('#sub_menu>span').toggleClass('on')

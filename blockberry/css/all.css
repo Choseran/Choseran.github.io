@@ -106,12 +106,12 @@
     height: 202px;
   }
   body #last{
-    margin: 100px 0 100px 2px;
+    margin: 100px 0;
     width: 360px;
     column-count: 1;
     position: relative;
     left: 50%;
-    transform: translateX(-46%);
+    transform: translateX(-44%);
   }
   #last .fig{
     display: inline-block;

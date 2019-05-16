@@ -4,7 +4,7 @@ article{
   text-align: center;
 }
 article>div{
-  width: 90%;
+  width: 80%;
   position: relative;
   top: 0;
   left: 50%;
@@ -15,6 +15,7 @@ article>div{
     margin: 100px auto;
   }
   article>div{
+    width: 100%;
   }
 }
 @media screen and (min-width: 1400px) {
