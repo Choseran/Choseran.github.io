@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+  <title>조세란 포트폴리오</title>
+  <style media="screen">
+  *{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
+  body{
+    overflow-x: hidden;
+  }
+  header{
+    width: 100vw;
+    height: 40px;
+    padding: 20px 0 0 30px;
+    background-color: #22404a;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  section, article, footer{
+    width: 100vw;
+    height: 100vh;
+  }
+  article{
+    background-color: #22404a;
+  }
+  nav{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 100;
+  }
+  nav ul{
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: red;
+    text-align: center;
+    font-size: 0;
+    overflow: hidden;
+  }
+  nav ul li{
+    display: inline-block;
+    font-size: 25px;
+    width: 25%;
+    padding: 12px 0;
+    cursor: pointer;
+  }
+  nav ul li:hover{
+    background-color: white;
+  }
+  .sub_menu{
+    width: 20px;
+    position: fixed;
+    top: 50%;
+    right: 2%;
+    z-index: 90;
+  }
+  .sub_menu>span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+
+  header b{
+    color: #ffa896;
+  }
+  header>p{
+    float: left;
+    display: inline-block;
+  }
+  header>ul{
+    float: right;
+    margin-right: 80px;
+  }
+  header>ul>li{
+    list-style: none;
+    float: left;
+    display: inline-block;
+    margin: 0 20px 0 20px;
+    cursor: pointer;
+  }
+
+  .article1{
+    position: relative;
+  }
+  .article1>p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffa896;
+    font-size: 40px;
+  }
+  .article1>.back>span{
+    display: none;
+  }
+  .article1>.back>.main_line{
+    background-color: #ffa896;
+    padding: 2px;
+    position: absolute;
+  }
+  .article1>.back>.sub_line{
+    background-color: #ffa896;
+    padding: 1px;
+    position: absolute;
+  }
+  .article1>.back>span:first-child{
+    top: 7%;
+    left: 5%;
+    width: 90%;
+  }
+  .article1>.back>span:nth-child(2){
+    top: 5%;
+    left: 7%;
+    height: 90%;
+  }
+  .article1>.back>span:nth-child(3){
+    bottom: 5%;
+    right: 7%;
+    height: 90%;
+  }
+  .article1>.back>span:nth-child(4){
+    bottom: 7%;
+    right: 5%;
+    width: 90%;
+  }
+  .article1>.back>span:nth-child(5){
+    top: 9%;
+    left: 6%;
+    width: 88%;
+  }
+  .article1>.back>span:nth-child(6){
+    top: 6%;
+    left: 8%;
+    height: 88%;
+  }
+  .article1>.back>span:nth-child(7){
+    bottom: 6%;
+    right: 8%;
+    height: 88%;
+  }
+  .article1>.back>span:last-child{
+    bottom: 9%;
+    right: 6%;
+    width: 88%;
+  }
+</style>
+</head>
+<body>
+  <nav class="sub_menu">
+    <span class="sub_bt"></span>
+    <span class="sub_bt"></span>
+    <span class="sub_bt"></span>
+    <span class="sub_bt"></span>
+  </nav>
+  <header>
+    <p><b>ChoSeRan</b></p>
+    <ul>
+      <li class="bt"><b>Home</b></li>
+      <li class="bt"><b>About</b></li>
+      <li class="bt"><b>Portfolio</b></li>
+      <li class="bt"><b>Contact</b></li>
+    </ul>
+  </header>
+  <article class="article1">
+    <p>PORTFOLIO</p>
+    <div class="back">
+      <span class="main_line span_L"></span>
+      <span class="main_line span_L"></span>
+      <span class="main_line span_R"></span>
+      <span class="main_line span_R"></span>
+      <span class="sub_line span_L"></span>
+      <span class="sub_line span_L"></span>
+      <span class="sub_line span_R"></span>
+      <span class="sub_line span_R"></span>
+    </div>
+  </article>
+  <section>
+  </section>
+  <article class="article2">
+  </article>
+  <footer>
+
+  </footer>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var bt = document.getElementsByClassName('bt');
+      var sub_bt = document.getElementsByClassName('sub_bt');
+      var position;
+
+      $(bt[0]).click(function(){
+        count = 0;
+        wheel_count();
+      });
+      $(bt[1]).click(function(){
+        count = 1;
+        wheel_count();
+      });
+      $(bt[2]).click(function(){
+        count = 2;
+        wheel_count();
+      });
+      $(bt[3]).click(function(){
+        count = 3;
+        wheel_count();
+      });
+      $(sub_bt[0]).click(function(){
+        count = 0;
+        wheel_count();
+      });
+      $(sub_bt[1]).click(function(){
+        count = 1;
+        wheel_count();
+      });
+      $(sub_bt[2]).click(function(){
+        count = 2;
+        wheel_count();
+      });
+      $(sub_bt[3]).click(function(){
+        count = 3;
+        wheel_count();
+      });
+
+      var div_h = 0;
+      var count = 0;
+      var scrollEvent = false;
+      var wheel_data;
+
+      $("html").on('mousewheel', function(c){
+        wheel_data = c.originalEvent.wheelDelta;
+        // console.log(wheel_data);
+        wheel_data = c.originalEvent.wheelDelta;
+          if (wheel_data > 0 && count > 0 && scrollEvent == false) {
+            c.preventDefault();
+            scrollEvent = true;
+            count --;
+            wheel_count();
+            setTimeout(function(){
+              scrollEvent = false;
+            }, 500);
+          }else if (wheel_data < 0 && count < 3 && scrollEvent == false) {
+            c.preventDefault();
+            scrollEvent = true;
+            count ++;
+            wheel_count();
+            setTimeout(function(){
+              scrollEvent = false;
+            }, 500);
+          }
+      });
+
+      $(sub_bt[0]).css("background-color", "#fff");
+      position = $("footer").offset();
+      $("html").animate({scrollTop:position.top},1);
+      position = $(".article1").offset();
+      $("html").animate({scrollTop:position.top},1000);
+      $(sub_bt[0]).css("background-color", "#ffa896");
+
+      function wheel_count(){
+        $(sub_bt[0]).css("background-color", "#ffa896");
+        $(sub_bt[1]).css("background-color", "#ffa896");
+        $(sub_bt[2]).css("background-color", "#ffa896");
+        $(sub_bt[3]).css("background-color", "#ffa896");
+      if(count == 0){
+          position = $(".article1").offset();
+          $("html").stop().animate({scrollTop:position.top},500);
+          $(sub_bt[0]).css("background-color", "#fff");
+        }
+        else if (count == 1) {
+          position = $("section").offset();
+          $("html").stop().animate({scrollTop:position.top},500);
+          $(sub_bt[1]).css("background-color", "#22404a");
+        }
+        else if (count == 2) {
+          position = $(".article2").offset();
+          $("html").stop().animate({scrollTop:position.top},500);
+          $(sub_bt[2]).css("background-color", "#fff");
+        }
+        else if (count == 3) {
+          position = $("footer").offset();
+          $("html").stop().animate({scrollTop:position.top},500);
+          $(sub_bt[3]).css("background-color", "#22404a");
+        }
+      }
+
+      $('.article1').mouseover(function() {
+        $('.article1>.back>span').delay(750).show(900);
+      });
+        $('.article1').trigger('mouseover');
+    });
+  </script>
+</body>
+</html>
