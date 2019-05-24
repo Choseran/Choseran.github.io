@@ -11,7 +11,7 @@ header{
   top: 0;
   left: 0;
 }
-section, article, footer{
+section, article{
   width: 100vw;
   height: 100vh;
 }
@@ -58,6 +58,9 @@ nav ul li:hover{
   background-color: white;
   border-radius: 50%;
   cursor: pointer;
+}
+ul li{
+  list-style: none;
 }
 
 
@@ -146,9 +149,49 @@ header>ul>li{
   width: 88%;
 }
 
-.article2 p{
+article p{
   color: #fff;
 }
-.article2>div>div>img{
-  width: 30%;
+article>div{
+  text-align: center;
+}
+article>div>div{
+  display: inline-block;
+  width: 80vw;
+  height: 70vh;
+}
+article>div>div>div.work{
+  position: relative;
+  border: 1px solid #fff;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+article>div>div>div>div.work_title{
+  width: 150px;
+  height: 50px;
+  background-color: #fff;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%);
+}
+article>div>div>div>div.work_title>b{
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translate(-50%);
+}
+article>div>div>div>ul>li>div>img{
+  width: 35%;
+}
+article>div>div>div>ul>li>div.article_work{
+
+}
+
+footer{
+  width: 100vw;
+  height: 40vh;
 }

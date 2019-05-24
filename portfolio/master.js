@@ -53,7 +53,7 @@ $(document).ready(function(){
         setTimeout(function(){
           scrollEvent = false;
         }, 500);
-      }else if (wheel_data < 0 && count < 3 && scrollEvent == false) {
+      }else if (wheel_data < 0 && count < 4 && scrollEvent == false) {
         c.preventDefault();
         scrollEvent = true;
         count ++;
@@ -66,10 +66,12 @@ $(document).ready(function(){
 
   $(sub_bt[0]).css("background-color", "#fff");
   $(bt[0]).children('b').css("color", "#fff");
+
   position = $("footer").offset();
   $("html").animate({scrollTop:position.top},1);
   position = $(".article1").offset();
   $("html").animate({scrollTop:position.top},1000);
+
   $(sub_bt[0]).css("background-color", "#ffa896");
   $(bt[0]).children('b').css("color", "#ffa896");
 
@@ -101,9 +103,15 @@ $(document).ready(function(){
       $(bt[2]).children('b').css("color", "#fff");
     }
     else if (count == 3) {
+      position = $(".article3").offset();
+      $("html").stop().animate({scrollTop:position.top},500);
+      $(sub_bt[2]).css("background-color", "#fff");
+      $(bt[2]).children('b').css("color", "#fff");
+    }
+    else if (count == 4) {
       position = $("footer").offset();
       $("html").stop().animate({scrollTop:position.top},500);
-      $(sub_bt[3]).css("background-color", "#22404a");
+      $(sub_bt[3]).css("background-color", "#fff");
       $(bt[3]).children('b').css("color", "#fff");
     }
   }
