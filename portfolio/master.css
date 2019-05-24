@@ -62,6 +62,9 @@ nav ul li:hover{
 ul li{
   list-style: none;
 }
+a{
+  text-decoration: none;
+}
 
 
 header b{
