@@ -19,46 +19,50 @@
 </head>
 <body>
   <nav class="sub_menu">
-    <span class="sub_bt"></span>
-    <span class="sub_bt"></span>
-    <span class="sub_bt"></span>
-    <span class="sub_bt"></span>
+    <a href="#home"><span class="sub_bt"></span></a>
+    <a href="#about"><span class="sub_bt"></span></a>
+    <a href="#portfolio"><span class="sub_bt"></span></a>
+    <a href="#contact"><span class="sub_bt"></span></a>
   </nav>
   <header>
     <p><b>ChoSeRan</b></p>
     <ul>
-      <li class="bt"><b>Home</b></li>
-      <li class="bt"><b>About</b></li>
-      <li class="bt"><b>Portfolio</b></li>
-      <li class="bt"><b>Contact</b></li>
+      <a href="#home"><li class="bt"><b>Home</b></li></a>
+      <a href="#about"><li class="bt"><b>About</b></li></a>
+      <a href="#portfolio"><li class="bt"><b>Portfolio</b></li></a>
+      <a href="#contact"><li class="bt"><b>Contact</b></li></a>
     </ul>
   </header>
-  <article class="article1">
+  <article class="article1" id="home">
     <p>PORTFOLIO</p>
     <div class="back">
-      <span class="main_line span_L"></span>
-      <span class="main_line span_L"></span>
-      <span class="main_line span_R"></span>
-      <span class="main_line span_R"></span>
-      <span class="sub_line span_L"></span>
-      <span class="sub_line span_L"></span>
-      <span class="sub_line span_R"></span>
-      <span class="sub_line span_R"></span>
+      <span class="main_line"></span>
+      <span class="main_line"></span>
+      <span class="main_line"></span>
+      <span class="main_line"></span>
+      <span class="sub_line"></span>
+      <span class="sub_line"></span>
+      <span class="sub_line"></span>
+      <span class="sub_line"></span>
     </div>
   </article>
-  <section>
+  <section class="article2" id="about">
     profile
-  </section>
-  <article class="article2">
+  </section >
+  <article class="article3" id="portfolio">
     <div>
       <div id="webpage">
         <div class="work">
           <div class="work_title"><b>Web Page</b></div>
           <ul>
             <li>
-              <div class="article_work">
-                <img src="img/img_1.png">
-                <a href="http://loona.dothome.co.kr"><p>걸그룹 '이달의 소녀' 팬페이지 제작</p></a>
+              <div class="web_work">
+                <a href="http://loona.dothome.co.kr" target="_blank">
+                  <img src="img/img_1.png">
+                  <p>걸그룹 '이달의 소녀' 팬페이지 제작</p>
+                  <br>
+                  <div class="work_hover"><p>페이지 바로가기</p></div>
+                </a>
               </div>
             </li>
           </ul>
@@ -66,19 +70,30 @@
       </div>
     </div>
   </article>
-  <article class="article3">
+  <article class="article4">
     <div>
       <div id="photoshop">
         <div class="work">
           <div class="work_title"><b>Photoshop</b></div>
-          <!-- <img src="img/poster.png">
-          <p>'반 고흐 인사이드:빛과 음악의 축제' 포스터 커버</p>
-          <img src="img/burger.png"> -->
+          <ul>
+            <li>
+              <div class="photo_work">
+                <img src="img/poster.png">
+                <div class="work_hover">
+                  <div>
+                    <div class="plus"></div>
+                    <div class="plus"></div>
+                  </div>
+                  <!-- <p>반 고흐 인사이드:빛과 음악의 축제 커버</p> -->
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
   </article>
-  <footer>
+  <footer id="contact">
     contact
   </footer>
 </body>

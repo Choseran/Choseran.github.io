@@ -10,6 +10,7 @@ header{
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 section, article{
   width: 100vw;
@@ -17,31 +18,6 @@ section, article{
 }
 article{
   background-color: #22404a;
-}
-nav{
-  position: fixed;
-  width: 100%;
-  height: 50px;
-  z-index: 100;
-}
-nav ul{
-  width: 800px;
-  height: 100%;
-  margin: 0 auto;
-  background-color: red;
-  text-align: center;
-  font-size: 0;
-  overflow: hidden;
-}
-nav ul li{
-  display: inline-block;
-  font-size: 25px;
-  width: 25%;
-  padding: 12px 0;
-  cursor: pointer;
-}
-nav ul li:hover{
-  background-color: white;
 }
 .sub_menu{
   width: 20px;
@@ -51,11 +27,11 @@ nav ul li:hover{
   transform: translateY(-50%);
   z-index: 90;
 }
-.sub_menu>span{
+.sub_menu>a>span{
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-color: white;
+  background-color: #ffa896;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -78,7 +54,7 @@ header>ul{
   float: right;
   margin-right: 80px;
 }
-header>ul>li{
+header>ul>a>li{
   list-style: none;
   float: left;
   display: inline-block;
@@ -98,6 +74,8 @@ header>ul>li{
   color: #ffa896;
   font-size: 4em;
 }
+
+/*메인 애니메이션 */
 .article1>.back>span{
   display: none;
 }
@@ -152,6 +130,7 @@ header>ul>li{
   width: 88%;
 }
 
+
 article p{
   color: #fff;
 }
@@ -163,7 +142,7 @@ article>div>div{
   width: 80vw;
   height: 70vh;
 }
-article>div>div>div.work{
+article .work{
   position: relative;
   border: 1px solid #fff;
   width: 100%;
@@ -172,7 +151,7 @@ article>div>div>div.work{
   left: 50%;
   transform: translate(-50%, -25%);
 }
-article>div>div>div>div.work_title{
+article .work_title{
   width: 150px;
   height: 50px;
   background-color: #fff;
@@ -180,21 +159,83 @@ article>div>div>div>div.work_title{
   top: -25px;
   left: 50%;
   transform: translate(-50%);
+  font-size: 15px;
 }
-article>div>div>div>div.work_title>b{
+article .work_title>b{
   position: absolute;
   top: 15px;
   left: 50%;
   transform: translate(-50%);
 }
-article>div>div>div>ul>li>div>img{
-  width: 35%;
+article>div>div#webpage>div>ul>li{
+  width: 40%;
+  margin: 30px;
 }
-article>div>div>div>ul>li>div.article_work{
-
+article>div>div#photoshop>div>ul>li{
+  width: 20%;
+  margin: 30px;
+}
+article>div>div#photoshop>div>ul>li{
+  font-size: 0;
+}
+article>div>div>div>ul>li>div{
+  position: relative;
+  margin: 0 auto;
+}
+article>div>div>div>ul>li>div.photo_work{
+  width: 100%;
+  cursor: pointer;
+}
+article>div>div>div>ul>li>div>a>img{
+  width: 100%;
+}
+article>div>div>div>ul>li>div .work_hover{
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+article>div>div>div>ul>li>div .work_hover>p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+article>div>div>div>ul>li>div .work_hover:hover{
+  opacity: 0.7;
+  transition: 0.5s;
+}
+article>div>div>div>ul>li>div.photo_work>img{
+  width: 100%;
+}
+.work_hover>div{
+  width: 50px;
+  height: 50px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.work_hover>div>.plus{
+  width: 20px;
+  border: 4px solid #fff;
+  border-radius: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.work_hover>div>.plus:first-child{
+  transform: translate(-14px,-3px) rotate(450deg);
 }
 
 footer{
   width: 100vw;
-  height: 40vh;
+  height: 50vh;
 }
