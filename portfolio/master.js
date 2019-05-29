@@ -12,7 +12,7 @@ $(document).ready(function(){
   $('.article1').trigger('mouseover');
 
   $( window ).scroll( function() {
-    if ( $( document ).scrollTop() > aboutOffset.top - 5000 ) {
+    if ( $( document ).scrollTop() > aboutOffset.top - 400 ) {
       $(bt[1]).children('b').css("color", "#fff");
       $(bt[2]).children('b').css("color", "#ffa896");
       $(bt[3]).children('b').css("color", "#ffa896");
@@ -101,4 +101,28 @@ $(document).ready(function(){
   }, function(){
     $(this).children('b').css("color", "#ffa896");
   });
+
+  var pWork = document.getElementsByClassName('photo_work');
+  var up = document.getElementsByClassName('up');
+
+  $(pWork[0]).click(function(){
+    $(up[0]).css('display','block');
+    $('.background').css('display','block');
+  });
+  $(pWork[1]).click(function(){
+    $(up[1]).css('display','block');
+    $('.background').css('display','block');
+  });
+  $(pWork[2]).click(function(){
+    $(up[2]).css('display','block');
+    $('.background').css('display','block');
+  });
+  $(pWork[3]).click(function(){
+    $(up[3]).css('display','block');
+    $('.background').css('display','block');
+  });
+  $('.xxx').click(function(){
+    $(up).css('display','none');
+    $('.background').css('display','none');
+  })
 });

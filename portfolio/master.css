@@ -132,11 +132,18 @@ header>ul>a>li{
 }
 /*메인애니메이션end*/
 
-section{
-  background: url(https://cdn.pixabay.com/photo/2016/11/23/14/45/coding-1853305_960_720.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+section, footer{
+  background: url(https://images.unsplash.com/photo-1438368603757-6ceae0151034?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; opacity: 0.6;
+  position: relative;
 }
 section>div{
-  margin: 0 auto;
+  background-color: #fff;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -43%);
 }
 
 
@@ -232,15 +239,15 @@ article>div>div>div>ul>li>div.photo_work>img{
 }
 .work_hover>div>.plus{
   width: 20px;
-  border: 4px solid #fff;
-  border-radius: 30%;
+  border: 3.5px solid #fff;
+  border-radius: 25%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .work_hover>div>.plus:first-child{
-  transform: translate(-14px,-3px) rotate(450deg);
+  transform: translate(-13.2px,-3px) rotate(450deg);
 }
 
 footer{
@@ -250,4 +257,59 @@ footer{
 
 .up{
   display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background-color: #fff;
+  text-align: center;
+}
+.up>b{
+  color: #ffa896;
+}
+.up>div>img{
+  height: 70vh;
+}
+.up>.icon_div{
+  width: 90%;
+  height: 90%;
+}
+.up>.icon_div>div.icon{
+  width: 640px;
+}
+.up>div.xxx{
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.up>div.xxx>span{
+  width: 20px;
+  border: 1px solid #000;
+  border-radius: 40%;
+  float: left;
+}
+.up>div.xxx>span:first-child{
+  transform: translate(0px,15px) rotate(-225deg);
+}
+.up>div.xxx>span:last-child{
+  transform: translate(-0px,13px) rotate(225deg);
+}
+.background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  z-index: 2;
+  opacity: 0.5;
+  display: none;
+}
+
+@media screen and (min-width: 0px) and (max-width: 755px){
+
 }
