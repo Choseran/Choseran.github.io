@@ -10,6 +10,7 @@ $(document).ready(function(){
     $('.article1>.back>span').show(900);
   });
   $('.article1').trigger('mouseover');
+
   $( window ).scroll( function() {
     if ( $( document ).scrollTop() > aboutOffset.top - 5000 ) {
       $(bt[1]).children('b').css("color", "#fff");
