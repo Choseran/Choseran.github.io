@@ -2,19 +2,16 @@ $(document).ready(function(){
   var bt = document.getElementsByClassName('bt');
   var sub_bt = document.getElementsByClassName('sub_bt');
 
-  var homeOffset = $( '#home' ).offset();
   var aboutOffset = $( '#about' ).offset();
   var portfolioOffset = $( '#portfolio' ).offset();
   var contactOffset = $( '#contact' ).offset();
 
+  $('.article1').mouseover(function() {
+    $('.article1>.back>span').show(900);
+  });
+  $('.article1').trigger('mouseover');
   $( window ).scroll( function() {
-    if ( $( document ).scrollTop() > homeOffset.top - 400 ) {
-      $('.article1').mouseover(function() {
-        $('.article1>.back>span').show(900);
-      });
-      $('.article1').trigger('mouseover');
-    }
-    if ( $( document ).scrollTop() > aboutOffset.top - 400 ) {
+    if ( $( document ).scrollTop() > aboutOffset.top - 5000 ) {
       $(bt[1]).children('b').css("color", "#fff");
       $(bt[2]).children('b').css("color", "#ffa896");
       $(bt[3]).children('b').css("color", "#ffa896");
