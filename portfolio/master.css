@@ -341,33 +341,6 @@ footer>div>b{
   height: 70vh;
   margin-top: 10px;
 }
-.up>.icon_div{
-  width: 90%;
-  height: 90%;
-}
-.up>.icon_div>div.icon{
-  width: 640px;
-}
-.up>div.xxx{
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-.up>div.xxx>span{
-  width: 20px;
-  border: 1px solid #000;
-  border-radius: 40%;
-  float: left;
-}
-.up>div.xxx>span:first-child{
-  transform: translate(0px,15px) rotate(-225deg);
-}
-.up>div.xxx>span:last-child{
-  transform: translate(-0px,13px) rotate(225deg);
-}
 .background{
   position: fixed;
   top: 0;

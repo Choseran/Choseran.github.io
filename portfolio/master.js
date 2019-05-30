@@ -133,7 +133,7 @@ $(document).ready(function(){
     $(up[5]).css('display','block');
     $('.background').css('display','block');
   });
-  $('.xxx').click(function(){
+  $('.background').click(function(){
     $(up).css('display','none');
     $('.background').css('display','none');
   })
