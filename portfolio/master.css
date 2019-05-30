@@ -1,7 +1,6 @@
 *{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
 body{
   overflow-x: hidden;
-
 }
 header{
   width: 100vw;
@@ -62,7 +61,6 @@ header>ul>a>li{
   margin: 0 20px 0 20px;
   cursor: pointer;
 }
-
 #home{
   position: relative;
   z-index: 500;
@@ -130,6 +128,51 @@ header>ul>a>li{
   right: 6%;
   width: 88%;
 }
+
+.center{
+  position: absolute;
+  top: 80vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 90px;
+  border-left: 4px dashed rgba(255,255,255,0.1);
+  display: none;
+}
+.arrow{
+  position: absolute;
+  top: 0;
+  left: -4px;
+  height: 40px;
+  width: 4px;
+  background-color: #fff;
+  animation: animate 2s infinite;
+}
+.arrow:before{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-bottom: 4px solid #fff;
+  border-right: 4px solid #fff;
+  transform: rotate(45deg);
+}
+@keyframes animate {
+  0%{
+    transform: translateY(0);
+    opacity:0.5;
+  }
+  50%{
+    transform: translateY(45px);
+    opacity:1;
+  }
+  100%{
+    transform: translateY(90px);
+    opacity:0;
+  }
+}
 /*메인애니메이션end*/
 
 section, footer{
@@ -144,8 +187,11 @@ section>div{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -43%);
+  display: flex;
 }
-
+section>div>div>div.skills{
+  display: flex;
+}
 
 article p{
   color: #fff;
@@ -199,8 +245,10 @@ article>div>div>div>ul>li>div{
 article>div>div>div>ul>li>div.photo_work{
   width: 100%;
   cursor: pointer;
+  overflow: hidden;
 }
 article>div>div>div>ul>li>div>a>img{
+  transition: 0.5s;
   width: 100%;
 }
 article>div>div>div>ul>li>div .work_hover{
@@ -211,7 +259,17 @@ article>div>div>div>ul>li>div .work_hover{
   position: absolute;
   top: 0;
   left: 0;
+  transition: 0.5s;
 }
+.photo_work img{
+  transform: scale(1);
+  transition: 0.5s;
+}
+.photo_work:hover img{
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
 article>div>div>div>ul>li>div .work_hover>p{
   position: absolute;
   top: 50%;
@@ -221,7 +279,6 @@ article>div>div>div>ul>li>div .work_hover>p{
 }
 article>div>div>div>ul>li>div .work_hover:hover{
   opacity: 0.7;
-  transition: 0.5s;
 }
 article>div>div>div>ul>li>div.photo_work>img{
   width: 100%;
@@ -253,11 +310,17 @@ footer{
   width: 100vw;
   height: 50vh;
 }
+footer>div{
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 7%;
+}
 footer>div>b{
   color: #2a4d59;
   font-size: 4em;
 }
 
+/*팝업창*/
 .up{
   display: none;
   position: fixed;
@@ -316,6 +379,7 @@ footer>div>b{
   opacity: 0.5;
   display: none;
 }
+/*팝업창end*/
 
 @media screen and (min-width: 0px) and (max-width: 755px){
  /*헤더메뉴*/

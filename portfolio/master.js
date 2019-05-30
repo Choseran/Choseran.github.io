@@ -8,6 +8,7 @@ $(document).ready(function(){
 
   $('#home').mouseover(function() {
     $('#home>.back>span').show(900);
+    $('.center').delay(910).fadeIn(300);
   });
   $('#home').trigger('mouseover');
 
@@ -30,6 +31,7 @@ $(document).ready(function(){
       $(sub_bt[1]).hover(function(){
         $(sub_bt[1]).css("background-color", "#22404a");
       });
+      $('.center').css("display","none");
     }
     if ( $( document ).scrollTop() > portfolioOffset.top - 400 ) {
       $(bt[1]).children('b').css("color", "#ffa896");
@@ -49,6 +51,7 @@ $(document).ready(function(){
       $(sub_bt[2]).hover(function(){
         $(sub_bt[2]).css("background-color", "#fff");
       });
+      $('.center').css("display","none");
     }
     if ( $( document ).scrollTop() > contactOffset.top - 500 ) {
       $(bt[1]).children('b').css("color", "#ffa896");
@@ -68,6 +71,7 @@ $(document).ready(function(){
       $(sub_bt[3]).hover(function(){
         $(sub_bt[3]).css("background-color", "#22404a");
       });
+      $('.center').css("display","none");
     }
   });
 
