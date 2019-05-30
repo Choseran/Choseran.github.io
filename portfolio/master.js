@@ -6,10 +6,10 @@ $(document).ready(function(){
   var portfolioOffset = $( '#portfolio' ).offset();
   var contactOffset = $( '#contact' ).offset();
 
-  $('.article1').mouseover(function() {
-    $('.article1>.back>span').show(900);
+  $('#home').mouseover(function() {
+    $('#home>.back>span').show(900);
   });
-  $('.article1').trigger('mouseover');
+  $('#home').trigger('mouseover');
 
   $( window ).scroll( function() {
     if ( $( document ).scrollTop() > aboutOffset.top - 400 ) {
@@ -119,6 +119,14 @@ $(document).ready(function(){
   });
   $(pWork[3]).click(function(){
     $(up[3]).css('display','block');
+    $('.background').css('display','block');
+  });
+  $(pWork[4]).click(function(){
+    $(up[4]).css('display','block');
+    $('.background').css('display','block');
+  });
+  $(pWork[5]).click(function(){
+    $(up[5]).css('display','block');
     $('.background').css('display','block');
   });
   $('.xxx').click(function(){
