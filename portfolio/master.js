@@ -8,7 +8,7 @@ $(document).ready(function(){
 
   $('#home').mouseover(function() {
     $('#home>.back>span').show(900);
-    $('.center').delay(910).fadeIn(300);
+    $('.center').delay(1450).fadeIn(300);
   });
   $('#home').trigger('mouseover');
 
@@ -20,6 +20,11 @@ $(document).ready(function(){
       $(sub_bt[1]).css("background-color", "#22404a");
       $(sub_bt[2]).css("background-color", "#ffa896");
       $(sub_bt[3]).css("background-color", "#ffa896");
+      $(bt).hover(function(){
+        $(this).children('b').css("color", "#fff");
+      }, function(){
+        $(this).children('b').css("color", "#ffa896");
+      });
       $(sub_bt).hover(function(){
         $(this).css("background-color", "#22404a");
       }, function(){
@@ -40,6 +45,11 @@ $(document).ready(function(){
       $(sub_bt[1]).css("background-color", "#ffa896");
       $(sub_bt[2]).css("background-color", "#fff");
       $(sub_bt[3]).css("background-color", "#ffa896");
+      $(bt).hover(function(){
+        $(this).children('b').css("color", "#fff");
+      }, function(){
+        $(this).children('b').css("color", "#ffa896");
+      });
       $(sub_bt).hover(function(){
         $(this).css("background-color", "#fff");
       }, function(){
@@ -60,6 +70,11 @@ $(document).ready(function(){
       $(sub_bt[1]).css("background-color", "#ffa896");
       $(sub_bt[2]).css("background-color", "#ffa896");
       $(sub_bt[3]).css("background-color", "#22404a");
+      $(bt).hover(function(){
+        $(this).children('b').css("color", "#fff");
+      }, function(){
+        $(this).children('b').css("color", "#ffa896");
+      });
       $(sub_bt).hover(function(){
         $(this).css("background-color", "#22404a");
       }, function(){
@@ -98,12 +113,6 @@ $(document).ready(function(){
   $(bt[3]).click(function(){
     $(sub_bt[3]).css("background-color", "#22404a");
     $(this).children('b').css("color", "#fff");
-  });
-
-  $(bt).hover(function(){
-    $(this).children('b').css("color", "#fff");
-  }, function(){
-    $(this).children('b').css("color", "#ffa896");
   });
 
   var pWork = document.getElementsByClassName('photo_work');
