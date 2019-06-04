@@ -117,32 +117,50 @@ $(document).ready(function(){
 
   var pWork = document.getElementsByClassName('photo_work');
   var up = document.getElementsByClassName('up');
+  var i;
 
   $(pWork[0]).click(function(){
-    $(up[0]).css('display','block');
-    $('.background').css('display','block');
+    i = 0;
+    clickMore();
   });
   $(pWork[1]).click(function(){
-    $(up[1]).css('display','block');
-    $('.background').css('display','block');
+    i = 1;
+    clickMore();
   });
   $(pWork[2]).click(function(){
-    $(up[2]).css('display','block');
-    $('.background').css('display','block');
+    i = 2;
+    clickMore();
   });
   $(pWork[3]).click(function(){
-    $(up[3]).css('display','block');
-    $('.background').css('display','block');
+    i = 3;
+    clickMore();
   });
   $(pWork[4]).click(function(){
-    $(up[4]).css('display','block');
-    $('.background').css('display','block');
+    i = 4;
+    clickMore();
   });
   $(pWork[5]).click(function(){
-    $(up[5]).css('display','block');
-    $('.background').css('display','block');
+    i = 5;
+    clickMore();
   });
+  $(pWork[6]).click(function(){
+    i = 6;
+    clickMore();
+  });
+  $(pWork[7]).click(function(){
+    i = 7;
+    clickMore();
+  });
+  function clickMore() {
+    $(up[i]).css('display','block');
+    $('.background').css('display','block');
+  }
+
   $('.background').click(function(){
+    $(up).css('display','none');
+    $('.background').css('display','none');
+  });
+  $(up).click(function(){
     $(up).css('display','none');
     $('.background').css('display','none');
   })

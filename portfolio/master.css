@@ -1,7 +1,5 @@
 *{margin: 0; padding: 0; font-family: 'Nanum Gothic', sans-serif;}
-body{
-  overflow-x: hidden;
-}
+body{overflow-x: hidden;}
 header{
   width: 100vw;
   height: 40px;
@@ -15,10 +13,9 @@ header{
 section, article{
   width: 100vw;
   height: 100vh;
+  min-height: 900px;
 }
-article{
-  background-color: #22404a;
-}
+article{background-color: #22404a;}
 .sub_menu{
   width: 20px;
   position: fixed;
@@ -35,17 +32,12 @@ article{
   border-radius: 50%;
   cursor: pointer;
 }
-ul li{
-  list-style: none;
-}
-a{
-  text-decoration: none;
-}
+ul li{list-style: none;}
+a{text-decoration: none;}
+hr{width: 90%;}
 
 
-header b{
-  color: #ffa896;
-}
+header b{color: #ffa896;}
 header>p{
   float: left;
   display: inline-block;
@@ -229,9 +221,9 @@ article .work_title>b{
   transform: translate(-50%);
 }
 article>div>div#webpage>div>ul>li{
-  width: 40%;
-  margin: 40px;
-  display: inline-block;
+  width: 100%;
+  margin: 40px auto;
+  display: flex;
 }
 article>div>div#photoshop>div>ul>li{
   width: 20%;
@@ -241,6 +233,13 @@ article>div>div#photoshop>div>ul>li{
 }
 article>div>div>div>ul>li>div{
   position: relative;
+}
+article>div>div#webpage>div>ul>li>div.web_work{
+  min-width: 243px;
+}
+article>div>div#webpage>div>ul>li>div.web_text{
+  width: 150vw;
+  min-width: 205px;
 }
 article>div>div>div>ul>li>div.photo_work{
   width: 100%;
@@ -253,6 +252,7 @@ article>div>div>div>ul>li>div>a>img{
 }
 article>div>div>div>ul>li>div .work_hover{
   width: 100%;
+  min-width: 205px;
   height: 100%;
   background-color: #000;
   opacity: 0;
@@ -309,6 +309,7 @@ article>div>div>div>ul>li>div.photo_work>img{
 footer{
   width: 100vw;
   height: 50vh;
+  min-height: 420px;
 }
 footer>div{
   text-align: center;
@@ -330,16 +331,25 @@ footer>div>b{
   z-index: 3;
   background-color: #fff;
   text-align: center;
-  font-size: 0;
   padding-top: 10px;
+}
+.up>div{
+  display: flex;
+}
+.up>div>div{
+  margin: 10px;
 }
 .up>b{
   color: #ffa896;
   font-size: 15px;
 }
-.up>div>img{
+.up>div>div.up_img>img{
   height: 70vh;
   margin-top: 10px;
+}
+.up>div>div>img.up_subImg{
+  height: 40%;
+  max-height: 200px;
 }
 .background{
   position: fixed;
