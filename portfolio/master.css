@@ -171,6 +171,10 @@ section>div{
   display: flex;
 }
 section>div>div>div.skills{display: flex;}
+section>div>div>div.skills>div>img{
+  width: 70%;
+  max-width: 83px;
+}
 
 article p{color: #fff;}
 article>div{text-align: center;}
