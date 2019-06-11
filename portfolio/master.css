@@ -225,9 +225,13 @@ article>div>div#photoshop>div>ul>li{
   font-size: 0;
   display: inline-block;
 }
+article>div>div#webpage>div>ul>li>div.web_text>pre{
 
+}
 article>div>div#webpage>div>ul>li>div.web_text>b{color: #ffa896; font-size: 1.2em;}
-article>div>div#webpage>div>ul>li>div.web_text>pre{color: #fff;}
+article>div>div#webpage>div>ul>li>div.web_text>p.w_sub_text{
+  margin: 20px;
+}
 article>div>div>div>ul>li>div{position: relative;}
 article>div>div>div>ul>li>div.photo_work{
   width: 100%;
