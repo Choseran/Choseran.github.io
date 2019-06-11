@@ -67,9 +67,7 @@ header>ul>a>li{
 }
 
 /*메인 애니메이션 */
-#home>.back>span{
-  display: none;
-}
+#home>.back>span{display: none;}
 #home>.back>.main_line{
   background-color: #ffa896;
   padding: 2px;
@@ -152,23 +150,14 @@ header>ul>a>li{
   transform: rotate(45deg);
 }
 @keyframes animate {
-  0%{
-    transform: translateY(0);
-    opacity:0.5;
-  }
-  50%{
-    transform: translateY(45px);
-    opacity:1;
-  }
-  100%{
-    transform: translateY(90px);
-    opacity:0;
-  }
+  0%{transform: translateY(0); opacity:0.5;}
+  50%{transform: translateY(45px); opacity:1;}
+  100%{transform: translateY(90px); opacity:0;}
 }
 /*메인애니메이션end*/
 
 section, footer{
-  background: url(img/back.png) no-repeat center center fixed; background-size: cover;
+  background: url(img/back.png) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
   position: relative;
 }
 section>div{
@@ -181,16 +170,10 @@ section>div{
   transform: translate(-50%, -43%);
   display: flex;
 }
-section>div>div>div.skills{
-  display: flex;
-}
+section>div>div>div.skills{display: flex;}
 
-article p{
-  color: #fff;
-}
-article>div{
-  text-align: center;
-}
+article p{color: #fff;}
+article>div{text-align: center;}
 article>div>div{
   display: inline-block;
   width: 80vw;
@@ -225,22 +208,21 @@ article>div>div#webpage>div>ul>li{
   margin: 40px auto;
   display: flex;
 }
+article>div>div#webpage>div>ul>li>div.web_work{min-width: 243px;}
+article>div>div#webpage>div>ul>li>div.web_text{
+  width: 150vw;
+  min-width: 205px;
+}
 article>div>div#photoshop>div>ul>li{
   width: 20%;
   margin: 40px 2%;
   font-size: 0;
   display: inline-block;
 }
-article>div>div>div>ul>li>div{
-  position: relative;
-}
-article>div>div#webpage>div>ul>li>div.web_work{
-  min-width: 243px;
-}
-article>div>div#webpage>div>ul>li>div.web_text{
-  width: 150vw;
-  min-width: 205px;
-}
+
+article>div>div#webpage>div>ul>li>div.web_text>b{color: #ffa896; font-size: 1.2em;}
+
+article>div>div>div>ul>li>div{position: relative;}
 article>div>div>div>ul>li>div.photo_work{
   width: 100%;
   cursor: pointer;
@@ -277,12 +259,8 @@ article>div>div>div>ul>li>div .work_hover>p{
   transform: translate(-50%, -50%);
   font-size: 2em;
 }
-article>div>div>div>ul>li>div .work_hover:hover{
-  opacity: 0.7;
-}
-article>div>div>div>ul>li>div.photo_work>img{
-  width: 100%;
-}
+article>div>div>div>ul>li>div .work_hover:hover{opacity: 0.7;}
+article>div>div>div>ul>li>div.photo_work>img{width: 100%;}
 .work_hover>div{
   width: 50px;
   height: 50px;
@@ -302,9 +280,7 @@ article>div>div>div>ul>li>div.photo_work>img{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.work_hover>div>.plus:first-child{
-  transform: translate(-13.2px,-3px) rotate(450deg);
-}
+.work_hover>div>.plus:first-child{transform: translate(-13.2px,-3px) rotate(450deg);}
 
 footer{
   width: 100vw;
@@ -320,9 +296,7 @@ footer>div>b{
   color: #2a4d59;
   font-size: 4em;
 }
-footer>div>div>p{
-  font-weight: bold;
-}
+footer>div>div>p{font-weight: bold;}
 
 /*팝업창*/
 .up{
@@ -336,16 +310,12 @@ footer>div>div>p{
   text-align: center;
   padding-top: 10px;
 }
-.up>div{
-  display: flex;
-}
+.up>div{display: flex;}
 .up>b{
   color: #ffa896;
-  font-size: 15px;
+  font-size: 1.2em;
 }
-.up>div>div{
-  margin: 10px;
-}
+.up>div>div{margin: 10px;}
 .up>div>div.up_img>img{
   height: 70vh;
   margin-top: 10px;
