@@ -320,6 +320,9 @@ footer>div>b{
   color: #2a4d59;
   font-size: 4em;
 }
+footer>div>div>p{
+  font-weight: bold;
+}
 
 /*팝업창*/
 .up{
@@ -336,19 +339,19 @@ footer>div>b{
 .up>div{
   display: flex;
 }
-.up>div>div{
-  margin: 10px;
-}
 .up>b{
   color: #ffa896;
   font-size: 15px;
+}
+.up>div>div{
+  margin: 10px;
 }
 .up>div>div.up_img>img{
   height: 70vh;
   margin-top: 10px;
 }
-.up>div>div>img.up_subImg{
-  height: 40%;
+.up>div>div>div>img.up_subImg{
+  height: 50%;
   max-height: 200px;
 }
 .background{
