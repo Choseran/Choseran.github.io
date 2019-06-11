@@ -213,15 +213,17 @@ article>div>div#webpage>div>ul>li>div.web_text{
   width: 150vw;
   min-width: 205px;
 }
+article>div>div#photoshop>div>ul{margin-top: 50px;}
 article>div>div#photoshop>div>ul>li{
   width: 20%;
   margin: 40px 2%;
+  margin-top: 0px;
   font-size: 0;
   display: inline-block;
 }
 
 article>div>div#webpage>div>ul>li>div.web_text>b{color: #ffa896; font-size: 1.2em;}
-
+article>div>div#webpage>div>ul>li>div.web_text>pre{color: #fff;}
 article>div>div>div>ul>li>div{position: relative;}
 article>div>div>div>ul>li>div.photo_work{
   width: 100%;
@@ -319,6 +321,9 @@ footer>div>div>p{font-weight: bold;}
 .up>div>div.up_img>img{
   height: 70vh;
   margin-top: 10px;
+}
+.up>div>div>div.up_text{
+  /* 텍스트가운데로 오게 하기 */
 }
 .up>div>div>div>img.up_subImg{
   height: 50%;
