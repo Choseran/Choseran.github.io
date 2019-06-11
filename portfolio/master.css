@@ -330,9 +330,6 @@ footer>div>div>p{font-weight: bold;}
   height: 70vh;
   margin-top: 10px;
 }
-.up>div>div>div.up_text{
-  /* 텍스트가운데로 오게 하기 */
-}
 .up>div>div>div>img.up_subImg{
   height: 50%;
   max-height: 200px;
@@ -350,6 +347,6 @@ footer>div>div>p{font-weight: bold;}
 }
 /*팝업창end*/
 
-@media screen and (min-width: 0px) and (max-width: 755px){
+@media screen and (min-width: 0px) and (max-width: 1068px){
  /*헤더메뉴*/
 }
