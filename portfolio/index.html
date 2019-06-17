@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.1/dist/circle-progress.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="icon/icon.ico">
   <link rel="icon" href="icon/icon_32.ico" sizes="32x32">
@@ -29,18 +30,10 @@
   <header>
     <p><b>ChoSeRan</b></p>
     <ul>
-      <a href="#home">
-        <li class="bt"><b>Home</b></li>
-      </a>
-      <a href="#about">
-        <li class="bt"><b>About</b></li>
-      </a>
-      <a href="#portfolio">
-        <li class="bt"><b>Portfolio</b></li>
-      </a>
-      <a href="#contact">
-        <li class="bt"><b>Contact</b></li>
-      </a>
+      <a href="#home"><li class="bt"><b>Home</b></li></a>
+      <a href="#about"><li class="bt"><b>About</b></li></a>
+      <a href="#portfolio"><li class="bt"><b>Portfolio</b></li></a>
+      <a href="#contact"><li class="bt"><b>Contact</b></li></a>
     </ul>
   </header>
   <article id="home">
@@ -62,28 +55,55 @@
   <section id="about">
     <div>
       <div class="profile1">
-        <img src="img/dot_2.gif" style="width: 50%;"><br><!--임시-->
-        <b>이름</b><p>조세란</p>
-        <b>생년월일</b><p>1998.02.06</p>
-        <b>번호</b><p>010-2890-3989</p>
-        <b>메일</b><p>choseran.w@gmail.com</p>
-        <b>주소</b><p>경기 고양시 덕양구 행신동</p>
+        <img src="img/about.jpg"><br>
+        <div class="profile1_text">
+          <div class="text_box1">
+            <b>이&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;름</b><br><br>
+            <b>생년월일</b><br><br>
+            <b>번&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;호</b><br><br>
+            <b>메&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;일</b><br><br>
+            <b>주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소</b>
+          </div>
+          <div class="text_box2">
+            <p>조세란</p><br>
+            <p>1998.02.06</p><br>
+            <p>010-2890-3989</p><br>
+            <p>choseran.w@gmail.com</p><br>
+            <p>경기 고양시 덕양구 행신동</p>
+          </div>
+        </div>
       </div>
       <div class="profile2">
         <b>교육</b>
-        <p>2019.7 경기산업기술센터 웹콘텐츠디자인 수료</p>
+        <p>2019.7 경기산업기술센터 웹콘텐츠디자인 수료</p><br>
         <b>학력</b>
         <p>2019.2 경인여자대학교 아동미술과 졸업</p>
-        <p>2016.2 서정고등학교 졸업</p>
+        <p>2016.2 서정고등학교 졸업</p><br>
         <b>공모전</b>
         <p>2018 제 25회 한국미술국제대전 특별상</p>
-        <p>2017 제 7회 현대조형미술대전 특선</p>
-        <b>Skills</b>
+        <p>2017 제 7회 현대조형미술대전 특선</p><br><br>
+        <b>Skills</b><br>
         <div class="skills">
-          <div><img src="img/html.png"><p>HTML</p></div>
-          <div><img src="img/css.png"><p>CSS</p></div>
-          <div><img src="img/javascript.png"><p>jQuery</p></div>
-          <div><img src="img/photoshop.png"><p>Photoshop</p></div>
+          <div class="circle html">
+            <strong></strong>
+            <span>HTML</span>
+          </div>
+          <div class="circle css">
+            <strong></strong>
+            <span>CSS</span>
+          </div>
+          <div class="circle jquery">
+            <strong></strong>
+            <span>jQuery</span>
+          </div>
+          <div class="circle psd">
+            <strong></strong>
+            <span>Photoshop</span>
+          </div>
+          <!-- <div class="circle clip">
+            <strong></strong>
+            <span>CLIP STUDIO</span>
+          </div> -->
         </div>
       </div>
     </div>
@@ -137,7 +157,7 @@
       </div>
     </div>
   </article>
-  <article>
+  <article id="portfolio2">
     <div>
       <div id="photoshop">
         <div class="work">
@@ -214,12 +234,10 @@
   </article>
   <footer id="contact">
     <div>
-      <b>contact</b>
-      <br>
+      <b>contact</b><br><br><br>
       <div class="">
-        <p>조세란</p>
-        <p>010-2890-3989</p>
-        <p>choseran.w@gmail.com</p>
+        <p style="font-size:1.2em;">조세란</p><br>
+        <p>010-2890-3989ㅣchoseran.w@gmail.com</p><br>
       </div>
     </div>
   </footer>
@@ -246,7 +264,7 @@
       </div>
     </div>
   </div>
-  <div class="up">
+  <div class="up up_2">
     <b>버거집 포스터 커버</b>
     <div>
       <div class="up_img"><img src="img/burger_.png"></div>
@@ -313,7 +331,7 @@
   <div class="up">
     <b>원 공인중개사 명함</b>
     <div>
-      <div class="up_img"><img src="img/card_.png"></div>
+      <div class="up_img"><img src="img/card_.png" style="height: 30vh;"></div>
       <div>
         <div class="up_text">
           <b>사용 프로그램</b>
@@ -378,12 +396,12 @@
       <div>
         <div class="up_text">
           <b>사용 프로그램</b>
-          <p>Photoshop</p><br>
+          <p>CLIP STUDIO, Photoshop</p><br>
           <pre>포토샵으로 간단하게 움직이는 gif이미지를 만들었습니다.
 
-그림을 그리고 레이어를 분리해놓은 다음 <b>타임라인</b>을 이용해
-곰과 곰이 타고 있는 튜브가 둥실둥실 떠다니는 느낌을 주도록 위 아래로
-천천히 움직이게 했습니다.
+클립 스튜디오로 그림을 그리고 레이어를 분리해놓은 다음 <b>타임라인</b>을
+이용해 곰과 곰이 타고 있는 튜브가 둥실둥실 떠다니는 느낌을 주도록
+위 아래로 천천히 움직이게 했습니다.
 </pre><br>
           <img class="up_subImg" src="img/gom_1.png">
         </div>

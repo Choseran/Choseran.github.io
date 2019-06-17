@@ -170,12 +170,38 @@ section>div{
   transform: translate(-50%, -43%);
   display: flex;
 }
+section>div>div{margin-top: 11%;}
+section>div>.profile1{margin: 8% 9% 0 5%;}
+section>div>.profile1>img{width: 400px;}
+section>div>.profile1>div{display: flex;}
+section>div>.profile1>.profile1_text>div{margin: 5% auto;}
 section>div>div>div.skills{display: flex;}
-section>div>div>div.skills>div>img{
-  width: 70%;
-  max-width: 83px;
+section>div>div>div.skills>div{text-align: center;}
+.circle {
+  width: 100px;
+  margin: 6px 6px 20px;
+  display: inline-block;
+  position: relative;
+  line-height: 1.2;
 }
-
+.circle canvas {vertical-align: top;}
+.circle strong {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  line-height: 40px;
+  font-size: 30px;
+}
+.circle strong i {
+  font-style: normal;
+  font-size: 0.6em;
+  font-weight: normal;
+}
+.circle span {
+  display: block;
+  margin-top: 12px;
+}
 article p{color: #fff;}
 article>div{text-align: center;}
 article>div>div{
@@ -300,7 +326,7 @@ footer{
 footer>div{
   text-align: center;
   margin: 0 auto;
-  padding-top: 7%;
+  padding-top: 9%;
 }
 footer>div>b{
   color: #2a4d59;
@@ -347,6 +373,59 @@ footer>div>div>p{font-weight: bold;}
 }
 /*팝업창end*/
 
-@media screen and (min-width: 0px) and (max-width: 1068px){
- /*헤더메뉴*/
+@media screen and (min-width: 641px) and (max-width: 1200px){
+  /*태블릿*/
+  header{
+    width: 100%;
+    max-width: 1200px;
+    height: 40px;
+    padding: 20px 0 0 30px;
+    background-color: #22404a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  section, article{
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+  }
+  #portfolio2{
+    height: 70vh;
+  }
+  footer{
+    width: 100%;
+    max-width: 1200px;
+    height: 30vh;
+  }
+  #home>.back>span:nth-child(6){
+    top: 6%;
+    left: 9.5%;
+    height: 88%;
+  }
+  #home>.back>span:nth-child(7){
+    bottom: 6%;
+    right: 9.5%;
+    height: 88%;
+  }
+  nav{display: none;}
+  .up>div{display: block;}
+  .up>div>div.up_img>img{
+    height: 50vh;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 640px){
+ /*모바일*/
+ #home>.back>span:nth-child(6){
+   top: 6%;
+   left: 9.5%;
+   height: 88%;
+ }
+ #home>.back>span:nth-child(7){
+   bottom: 6%;
+   right: 9.5%;
+   height: 88%;
+ }
 }
