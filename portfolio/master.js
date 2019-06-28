@@ -4,6 +4,7 @@ $(document).ready(function(){
 
   var aboutOffset = $( '#about' ).offset();
   var portfolioOffset = $( '#portfolio' ).offset();
+  var portfolio2Offset = $( '#portfolio2' ).offset();
   var contactOffset = $( '#contact' ).offset();
 
   $('#home').mouseover(function() {
@@ -20,6 +21,7 @@ $(document).ready(function(){
       $(sub_bt[1]).css("background-color", "#22404a");
       $(sub_bt[2]).css("background-color", "#ffa896");
       $(sub_bt[3]).css("background-color", "#ffa896");
+      $(sub_bt[4]).css("background-color", "#ffa896");
       $(bt).hover(function(){
         $(this).children('b').css("color", "#fff");
       }, function(){
@@ -45,6 +47,7 @@ $(document).ready(function(){
       $(sub_bt[1]).css("background-color", "#ffa896");
       $(sub_bt[2]).css("background-color", "#fff");
       $(sub_bt[3]).css("background-color", "#ffa896");
+      $(sub_bt[4]).css("background-color", "#ffa896");
       $(bt).hover(function(){
         $(this).children('b').css("color", "#fff");
       }, function(){
@@ -63,13 +66,40 @@ $(document).ready(function(){
       });
       $('.center').css("display","none");
     }
+    if ( $( document ).scrollTop() > portfolio2Offset.top - 400 ) {
+      $(bt[1]).children('b').css("color", "#ffa896");
+      $(bt[2]).children('b').css("color", "#fff");
+      $(bt[3]).children('b').css("color", "#ffa896");
+      $(sub_bt[1]).css("background-color", "#ffa896");
+      $(sub_bt[2]).css("background-color", "#ffa896");
+      $(sub_bt[3]).css("background-color", "#fff");
+      $(sub_bt[4]).css("background-color", "#ffa896");
+      $(bt).hover(function(){
+        $(this).children('b').css("color", "#fff");
+      }, function(){
+        $(this).children('b').css("color", "#ffa896");
+      });
+      $(sub_bt).hover(function(){
+        $(this).css("background-color", "#fff");
+      }, function(){
+        $(this).css("background-color", "#ffa896");
+      });
+      $(bt[2]).hover(function(){
+        $(bt[2]).children('b').css("color", "#fff");
+      });
+      $(sub_bt[3]).hover(function(){
+        $(sub_bt[3]).css("background-color", "#fff");
+      });
+      $('.center').css("display","none");
+    }
     if ( $( document ).scrollTop() > contactOffset.top - 500 ) {
       $(bt[1]).children('b').css("color", "#ffa896");
       $(bt[2]).children('b').css("color", "#ffa896");
       $(bt[3]).children('b').css("color", "#fff");
       $(sub_bt[1]).css("background-color", "#ffa896");
       $(sub_bt[2]).css("background-color", "#ffa896");
-      $(sub_bt[3]).css("background-color", "#22404a");
+      $(sub_bt[3]).css("background-color", "#ffa896");
+      $(sub_bt[4]).css("background-color", "#22404a");
       $(bt).hover(function(){
         $(this).children('b').css("color", "#fff");
       }, function(){
@@ -83,8 +113,8 @@ $(document).ready(function(){
       $(bt[3]).hover(function(){
         $(bt[3]).children('b').css("color", "#fff");
       });
-      $(sub_bt[3]).hover(function(){
-        $(sub_bt[3]).css("background-color", "#22404a");
+      $(sub_bt[4]).hover(function(){
+        $(sub_bt[4]).css("background-color", "#22404a");
       });
       $('.center').css("display","none");
     }
@@ -100,6 +130,10 @@ $(document).ready(function(){
   });
   $(sub_bt[3]).click(function(){
     $(this).css("background-color", "#22404a");
+    $(bt[2]).children('b').css("color", "#fff");
+  });
+  $(sub_bt[4]).click(function(){
+    $(this).css("background-color", "#22404a");
     $(bt[3]).children('b').css("color", "#fff");
   });
   $(bt[1]).click(function(){
@@ -111,7 +145,7 @@ $(document).ready(function(){
     $(this).children('b').css("color", "#fff");
   });
   $(bt[3]).click(function(){
-    $(sub_bt[3]).css("background-color", "#22404a");
+    $(sub_bt[4]).css("background-color", "#22404a");
     $(this).children('b').css("color", "#fff");
   });
 
