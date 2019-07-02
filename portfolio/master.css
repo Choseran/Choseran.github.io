@@ -13,7 +13,7 @@ header{
 section, article{
   width: 100vw;
   height: 100vh;
-  min-height: 900px;
+  min-height: 1000px;
 }
 article{background-color: #22404a;}
 .sub_menu{
@@ -169,6 +169,7 @@ section>div{
   left: 50%;
   transform: translate(-50%, -43%);
   display: flex;
+  min-width: 1160px;
 }
 section>div>div{margin-top: 11%;}
 section>div>.profile1{margin: 8% 9% 0 5%;}
@@ -184,7 +185,7 @@ section>div>div>div.skills>div{text-align: center;}
   position: relative;
   line-height: 1.2;
 }
-.circle canvas {vertical-align: top;}
+.circle canvas {vertical-align: top; transform: rotate(90deg);}
 .circle strong {
   position: absolute;
   top: 30px;
@@ -202,6 +203,7 @@ section>div>div>div.skills>div{text-align: center;}
   display: block;
   margin-top: 12px;
 }
+
 article p{color: #fff;}
 article>div{text-align: center;}
 article>div>div{
@@ -243,6 +245,7 @@ article>div>div#webpage>div>ul>li>div.web_text{
   width: 150vw;
   min-width: 205px;
 }
+#portfolio2{height: 130vh;}
 article>div>div#photoshop>div>ul{margin-top: 50px;}
 article>div>div#photoshop>div>ul>li{
   width: 20%;
@@ -250,9 +253,6 @@ article>div>div#photoshop>div>ul>li{
   margin-top: 0px;
   font-size: 0;
   display: inline-block;
-}
-article>div>div#webpage>div>ul>li>div.web_text>pre{
-
 }
 article>div>div#webpage>div>ul>li>div.web_text>b{color: #ffa896; font-size: 1.2em;}
 article>div>div#webpage>div>ul>li>div.web_text>p.w_sub_text{
@@ -391,9 +391,7 @@ footer>div>div>p{font-weight: bold;}
     max-width: 1200px;
     height: 100vh;
   }
-  #portfolio2{
-    height: 70vh;
-  }
+  #portfolio2{height: 70vh;}
   footer{
     width: 100%;
     max-width: 1200px;

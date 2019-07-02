@@ -185,6 +185,10 @@ $(document).ready(function(){
     i = 7;
     clickMore();
   });
+  $(pWork[8]).click(function(){
+    i = 8;
+    clickMore();
+  });
   function clickMore() {
     $(up[i]).css('display','block');
     $('.background').css('display','block');
@@ -213,10 +217,10 @@ $(document).ready(function(){
       $(this).find('strong').html(Math.round(70 * progress) + '<i>%</i>');
     });
     $('.jquery').circleProgress({
-      value: 0.65,
+      value: 0.7,
       fill: {gradient: ['#ff5f43', '#ffa896']}
     }).on('circle-animation-progress', function(event, progress) {
-      $(this).find('strong').html(Math.round(65 * progress) + '<i>%</i>');
+      $(this).find('strong').html(Math.round(70 * progress) + '<i>%</i>');
     });
     $('.psd').circleProgress({
       value: 0.8,
@@ -224,7 +228,7 @@ $(document).ready(function(){
     }).on('circle-animation-progress', function(event, progress) {
       $(this).find('strong').html(Math.round(80 * progress) + '<i>%</i>');
     });
-    $('.clip').circleProgress({
+    $('.illu').circleProgress({
       value: 0.6,
       fill: {gradient: ['#ff5f43', '#ffa896']}
     }).on('circle-animation-progress', function(event, progress) {
