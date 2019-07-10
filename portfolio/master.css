@@ -178,6 +178,7 @@ section>div>.profile1>div{display: flex;}
 section>div>.profile1>.profile1_text>div{margin: 5% auto;}
 section>div>div>div.skills{display: flex;}
 section>div>div>div.skills>div{text-align: center;}
+
 .circle {
   width: 100px;
   margin: 6px 6px 20px;
@@ -310,6 +311,7 @@ article>div>div>div>ul>li>div.photo_work>img{width: 100%;}
 .work_hover>div>.plus{
   width: 20px;
   border: 3.5px solid #fff;
+  background-color: #fff;
   border-radius: 25%;
   position: absolute;
   top: 50%;
@@ -347,10 +349,7 @@ footer>div>div>p{font-weight: bold;}
   padding-top: 10px;
 }
 .up>div{display: flex;}
-.up>b{
-  color: #ffa896;
-  font-size: 1.2em;
-}
+.up>b{color: #ffa896; font-size: 1.2em;}
 .up>div>div{margin: 10px;}
 .up>div>div.up_img>img{
   height: 70vh;
@@ -371,6 +370,10 @@ footer>div>div>p{font-weight: bold;}
   opacity: 0.5;
   display: none;
 }
+.xxx{width: 40px; height: 40px; display: inline-block; position: fixed; top:10px; right: 0px; z-index: 10; cursor: pointer; display: none;}
+.xxx>span{position: absolute; width: 5px; height: 40px; background-color: #fff;}
+.xxx>span:first-child{transform: rotate(45deg);}
+.xxx>span:last-child{transform: rotate(-45deg);}
 /*팝업창end*/
 
 @media screen and (min-width: 641px) and (max-width: 1200px){

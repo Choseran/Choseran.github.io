@@ -189,17 +189,19 @@ $(document).ready(function(){
     i = 8;
     clickMore();
   });
+  $(pWork[9]).click(function(){
+    i = 9;
+    clickMore();
+  });
   function clickMore() {
     $(up[i]).css('display','block');
     $('.background').css('display','block');
+    $('.xxx').css('display','block');
   };
 
-  $('.background').click(function(){
+  $('.background, .xxx').click(function(){
     $(up).css('display','none');
-    $('.background').css('display','none');
-  });
-  $(up).click(function(){
-    $(up).css('display','none');
+    $('.xxx').css('display','none');
     $('.background').css('display','none');
   });
 
