@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <title>색상코드로 하트색 바꾸기</title>
+  <style media="screen">
+    *{margin:0; padding:0;}
+    body{background: #efefef;}
+    div.main{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+    div.main>div.obj{width: 150px; margin: 0 auto;}
+    div.main>div.obj>div{display: flex;}
+    div.main>div.obj>div.heart:nth-child(1), div.heart:nth-child(3){margin-left: 30px;}
+    div.main>div.obj>div.heart:nth-child(1)>div:nth-child(1){margin-right: 30px;}
+    div.main>div.obj>div.heart:nth-child(4){margin-left: 60px;}
+    div.main>div.obj>div.heart>div{width: 30px; height: 30px; background-color: #000; font-size: 0;}
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="obj">
+      <div class="heart">
+        <div></div><div></div>
+      </div>
+      <div class="heart">
+        <div></div><div></div><div></div><div></div><div></div>
+      </div>
+      <div class="heart">
+        <div></div><div></div><div></div>
+      </div>
+      <div class="heart">
+        <div></div>
+      </div>
+    </div>
+    <br><br>
+    <div class="">
+      <input type="text" value="색상코드를 입력해주세요." onclick=this.value='' id="colorCode">
+      <button type="button" name="button" onclick="change()">변경</button>
+    </div>
+  </div>
+  <script type="text/javascript">
+  function change(){
+    var heart = document.querySelectorAll('.heart>div');
+    var aaa = document.getElementById('colorCode').value;
+    var i = 0;
+    while(i < heart.length){
+      heart[i].style.backgroundColor = aaa;
+      i = i + 1;
+    }
+  }
+</script>
+  </script> -->
+</body>
+</html>
