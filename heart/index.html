@@ -16,7 +16,6 @@
     div.main>div.obj>div.heart:nth-child(1)>div:nth-child(1){margin-right: 30px;}
     div.main>div.obj>div.heart:nth-child(4){margin-left: 60px;}
     div.main>div.obj>div.heart>div{width: 30px; height: 30px; background-color: #000; font-size: 0;}
-    #colorCode{color:#888}
   </style>
 </head>
 <body>
@@ -37,21 +36,24 @@
     </div>
     <br><br>
     <div>
-      <input type="text" value="색상코드를 입력해주세요." onclick=this.value='' id="colorCode">
+      <input type="text" value="색상코드를 입력해주세요." onclick=this.value=''  id="colorCode">
       <button type="button" name="button" onclick="change()">변경</button>
     </div>
   </div>
   <script type="text/javascript">
-  function change(){
-    var heart = document.querySelectorAll('.heart>div');
-    var aaa = document.getElementById('colorCode').value;
-    var i = 0;
-    while(i < heart.length){
-      heart[i].style.backgroundColor = aaa;
-      i = i + 1;
+    function change(){
+      var heart = document.querySelectorAll('.heart>div');
+      var aaa = document.getElementById('colorCode').value;
+      var i = 0;
+      if (aaa === "") {
+        alert("색상코드가 입력되지 않았습니다.")
+      }else{
+        while(i < heart.length){
+          heart[i].style.backgroundColor = aaa;
+          i = i + 1;
+        }
+      }
     }
-  }
-</script>
   </script>
 </body>
 </html>
