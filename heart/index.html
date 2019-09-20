@@ -45,7 +45,7 @@
       var heart = document.querySelectorAll('.heart>div');
       var aaa = document.getElementById('colorCode').value;
       var i = 0;
-      if (aaa === "") {
+      if (aaa === "" || aaa === "색상코드를 입력해주세요." || aaa === "#") {
         alert("색상코드가 입력되지 않았습니다.")
       }else{
         while(i < heart.length){
