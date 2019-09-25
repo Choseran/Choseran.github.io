@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style media="screen">
+  *{margin:0; padding:0;}
+  body{background: #111;}
+  div.mainText{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;}
+  div.mainText>b{color:#bfa167;}
+  div.mainText>p{
+    display: inline-block;
+    margin: 50px auto 0;
+    padding: 10px 25px;
+    font-size: 8.5em;
+    font-weight: 700;
+    text-align: center;
+    user-select: none;
+  }
+  div.mainText>p>span{
+    background: linear-gradient(90deg, #f0e3b4, #e4cb72, #e4cb72, #9d7b39);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @media screen and (max-width: 539px){
+    div.mainText>p{font-size: 4em;}
+}
+</style>
+<body>
+  <div class="mainText">
+    <p><span>歲&nbsp;&nbsp;&nbsp;星</span></p><br><br><br>
+    <b>목성의 주인, 세성길드에 오신 것을 환영합니다.</b><br><br>
+    <b>현재 페이지를 재정비 중이오니 다음에 다시 접속 부탁드립니다.</b>
+  </div>
+</body>
+</html>
