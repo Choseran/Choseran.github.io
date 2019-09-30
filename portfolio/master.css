@@ -176,6 +176,10 @@ section>div>.profile1{margin: 8% 9% 0 5%;}
 section>div>.profile1>img{width: 400px;}
 section>div>.profile1>div{display: flex;}
 section>div>.profile1>.profile1_text>div{margin: 5% auto;}
+section>div>.profile1>.profile1_text>div>p{margin: 5px 0 20px 0;}
+section>div>.profile1>.profile1_text>.text_box1>p{font-weight: bold;}
+section>div>.profile2>dl>dt{font-weight: bold;}
+section>div>.profile2>dl{margin-bottom: 40px;}
 section>div>div>div.skills{display: flex;}
 section>div>div>div.skills>div{text-align: center;}
 
@@ -330,10 +334,9 @@ footer>div{
   margin: 0 auto;
   padding-top: 9%;
 }
-footer>div>b{
-  color: #2a4d59;
-  font-size: 4em;
-}
+footer>div>b{color: #2a4d59; font-size: 4em;}
+footer>div>div{margin-top: 20px;}
+footer>div>div>p:first-child{font-size:1.2em; margin-bottom: 5px;}
 footer>div>div>p{font-weight: bold;}
 
 /*팝업창*/
