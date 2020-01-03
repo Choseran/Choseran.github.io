@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style media="screen">
+        *{margin: 0; padding: 0;}
+        body{background: #000;}
+        .wrap{position: absolute; top: 50px; left: 50px;}
+        ul{margin-bottom: 20px;}
+        .heart{width: 10px; height: 10px; margin-right: 5px; display: inline-block; background: #ee8484; border-radius: 10px;}
+
+        .button{width: 20px; height: 20px; display: inline-block; cursor: pointer;}
+        .one{background: #e9ce3b}
+        .two{background: #7b5fb8}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li class="heart"></li>
+            <li class="heart"></li>
+            <li class="heart"></li>
+            <li class="heart"></li>
+            <li class="heart"></li>
+        </ul>
+
+        <div class="button one"></div>
+        <div class="button two"></div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            var count = 0;
+
+            $('.one').click(function(){
+                if (count < 5) {
+                    ++count;
+                    $('.heart:nth-last-child('+ count + ')').css('display','none');
+                    $('body').css('background', '#fff');
+                    setTimeout(function(){
+                        $('body').css('background', '#000');
+                    },1000)
+                }
+            });
+
+            $('.two').click(function(){
+                if (count > 0) {
+                    $('.heart:nth-last-child('+ count + ')').css('display','inline-block');
+                    --count;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
