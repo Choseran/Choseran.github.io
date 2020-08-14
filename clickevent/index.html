@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Click Event</title>
     <style media="screen">
         * {margin: 0;padding: 0;}
         html,body{width: 100%;height: 100%}
@@ -69,39 +69,18 @@
             let result = document.querySelector('.score>em');
             result.textContent = score;
 
-            if (matchMedia("all and (max-width:768)")) {
-                var oneBottom = Math.floor(Math.random() * 80) + 11;
-                var oneRight = Math.floor(Math.random() * 80) + 11;
-                var twoTop = Math.floor(Math.random() * 80) + 11;
-                var twoRight = Math.floor(Math.random() * 80) + 11;
-                var threeBottom = Math.floor(Math.random() * 80) + 11;
-                var threeLeft = Math.floor(Math.random() * 80) + 11;
-                $('.one').css('bottom', oneBottom + '%');
-                $('.one').css('right', oneRight + '%');
-                $('.two').css('top', twoTop + '%');
-                $('.two').css('right', twoRight + '%');
-                $('.three').css('bottom', threeBottom + '%');
-                $('.three').css('left', threeLeft + '%');
-            } else {
-                var oneBottom = Math.floor(Math.random() * 650) + 51;
-                var oneRight = Math.floor(Math.random() * 1000) + 51;
-                var twoTop = Math.floor(Math.random() * 650) + 51;
-                var twoRight = Math.floor(Math.random() * 1000) + 51;
-                var threeBottom = Math.floor(Math.random() * 650) + 51;
-                var threeLeft = Math.floor(Math.random() * 1000) + 51;
-                $('.one').css('bottom', oneBottom);
-                $('.one').css('right', oneRight);
-                $('.two').css('top', twoTop);
-                $('.two').css('right', twoRight);
-                $('.three').css('bottom', threeBottom);
-                $('.three').css('left', threeLeft);
-            }
-
-
-
-
-            console.log(oneBottom);
-
+            var oneBottom = Math.floor(Math.random() * 80) + 11;
+            var oneRight = Math.floor(Math.random() * 80) + 11;
+            var twoTop = Math.floor(Math.random() * 80) + 11;
+            var twoRight = Math.floor(Math.random() * 80) + 11;
+            var threeBottom = Math.floor(Math.random() * 80) + 11;
+            var threeLeft = Math.floor(Math.random() * 80) + 11;
+            $('.one').css('bottom', oneBottom + '%');
+            $('.one').css('right', oneRight + '%');
+            $('.two').css('top', twoTop + '%');
+            $('.two').css('right', twoRight + '%');
+            $('.three').css('bottom', threeBottom + '%');
+            $('.three').css('left', threeLeft + '%');
 
             $('.on').click(function() {
                 if (count < 5) {
