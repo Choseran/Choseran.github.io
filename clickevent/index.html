@@ -7,7 +7,9 @@
     <title>Document</title>
     <style media="screen">
         * {margin: 0;padding: 0;}
+        html,body{width: 100%;height: 100%}
         body {background: #000;}
+        em{font-style: normal;}
         .wrap{width: 100%;height: 100%;min-width: 1024px; min-height: 768px;position: relative;}
         .btnWrap {position: absolute;top: 50px;left: 50px;}
         ul {margin-bottom: 20px;height: 21px;}
@@ -19,13 +21,22 @@
         .present{display:none;position: absolute;background: #3d3d3d;width: 20px;height: 20px}
         .one{bottom: 50px;right:50px;}
         .two{top: 200px;right: 850px}
+        .three{bottom: 70px;left: 120px;}
+
+        @media all and (max-width: 768px) {
+            .wrap{min-width: 100%; min-height: 100%;}
+            .present{width: 7%;height: 4%;}
+            .one{bottom: 5%;right:5%;}
+            .two{top: 5%;right: 5%}
+            .three{bottom: 5%;left: 5%;}
+        }
     </style>
 </head>
 <body>
     <div class="wrap">
         <div class="btnWrap">
             <div id="result" class="">
-                <p class="score">Score: {{score}}</p>
+                <p class="score">Score: <em></em></p>
             </div>
             <ul>
                 <li class="heart"></li>
@@ -41,10 +52,11 @@
         </div>
         <div class="present two">
         </div>
+        <div class="present three">
+        </div>
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 
     <script type="text/javascript">
@@ -52,19 +64,63 @@
 
             var count = 0;
             var score = 0;
+            var all = 3;
+
+            let result = document.querySelector('.score>em');
+            result.textContent = score;
+
+            if (matchMedia("all and (max-width:768)")) {
+                var oneBottom = Math.floor(Math.random() * 80) + 11;
+                var oneRight = Math.floor(Math.random() * 80) + 11;
+                var twoTop = Math.floor(Math.random() * 80) + 11;
+                var twoRight = Math.floor(Math.random() * 80) + 11;
+                var threeBottom = Math.floor(Math.random() * 80) + 11;
+                var threeLeft = Math.floor(Math.random() * 80) + 11;
+                $('.one').css('bottom', oneBottom + '%');
+                $('.one').css('right', oneRight + '%');
+                $('.two').css('top', twoTop + '%');
+                $('.two').css('right', twoRight + '%');
+                $('.three').css('bottom', threeBottom + '%');
+                $('.three').css('left', threeLeft + '%');
+            } else {
+                var oneBottom = Math.floor(Math.random() * 650) + 51;
+                var oneRight = Math.floor(Math.random() * 1000) + 51;
+                var twoTop = Math.floor(Math.random() * 650) + 51;
+                var twoRight = Math.floor(Math.random() * 1000) + 51;
+                var threeBottom = Math.floor(Math.random() * 650) + 51;
+                var threeLeft = Math.floor(Math.random() * 1000) + 51;
+                $('.one').css('bottom', oneBottom);
+                $('.one').css('right', oneRight);
+                $('.two').css('top', twoTop);
+                $('.two').css('right', twoRight);
+                $('.three').css('bottom', threeBottom);
+                $('.three').css('left', threeLeft);
+            }
+
+
+
+
+            console.log(oneBottom);
+
 
             $('.on').click(function() {
                 if (count < 5) {
-                    ++count;
-                    $('.heart:nth-last-child(' + count + ')').css('display', 'none');
-                    $('body').css('background', '#fff');
-                    $('.score').css('color', '#000');
-                    $('.present:not(.click)').css('display', 'block');
-                    setTimeout(function() {
-                        $('body').css('background', '#000');
-                        $('.score').css('color', '#fff');
-                        $('.present').css('display', 'none');
-                    }, 1000);
+                    if (score == all) {
+                        alert("축하드립니다!\n모두 찾으셨습니다!");
+                    } else {
+                        ++count;
+                        $('.heart:nth-last-child(' + count + ')').css('display', 'none');
+                        $('body').css('background', '#fff');
+                        $('.score').css('color', '#000');
+                        $('.present:not(.click)').css('display', 'block');
+                        setTimeout(function() {
+                            $('body').css('background', '#000');
+                            $('.score').css('color', '#fff');
+                            $('.present').css('display', 'none');
+                        }, 1000);
+                    }
+                } else if (score == all) {
+                    alert("축하드립니다!\n모두 찾으셨습니다!");
                 } else {
                     alert("기회를 전부 소진했습니다.\nF5를 눌러 처음부터 다시 해주세요.");
                 }
@@ -74,15 +130,10 @@
                     ++score;
                     $(this).css('display', 'none');
                     $(this).addClass('click');
-                }
-            })
+                    result.textContent = score;
 
-            var result = new Vue({
-                el: '#result',
-                data: {
-                    score: score
                 }
-            })
+            });
         });
     </script>
 </body>
