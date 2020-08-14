@@ -15,28 +15,23 @@
         ul {margin-bottom: 20px;height: 21px;}
         ul .heart:first-child {margin-top:7px}
         .heart {width: 10px;height: 10px;margin-right: 5px;display: inline-block;background: #ee8484;border-radius: 10px;}
-        .on {width: 30px;height: 30px;display: inline-block;cursor: pointer;text-align: center;background: #e9ce3b;}
-        .on p{line-height: 30px;}
-        .score {color: #fff}
-        .present{display:none;position: absolute;background: #3d3d3d;width: 20px;height: 20px}
-        .one{bottom: 50px;right:50px;}
-        .two{top: 200px;right: 850px}
-        .three{bottom: 70px;left: 120px;}
-
+        .on {width: 40px;height: 30px;display: inline-block;cursor: pointer;text-align: center;background: #e9ce3b;}
+        .levelUpBtn {width: 80px;height: 30px;display: none;cursor: pointer;text-align: center;background: #fff;}
+        .on p, .levelUpBtn p{line-height: 30px;}
+        .score, .level {color: #fff;display: inline-block;min-width: 85px;}
+        .square{display:none;position: absolute;background: #3d3d3d;width: 20px;height: 20px;top: 0;left:0;}
         @media all and (max-width: 768px) {
             .wrap{min-width: 100%; min-height: 100%;}
-            .present{width: 7%;height: 4%;}
-            .one{bottom: 5%;right:5%;}
-            .two{top: 5%;right: 5%}
-            .three{bottom: 5%;left: 5%;}
+            .square{width: 7%;height: 4%}
         }
     </style>
 </head>
 <body>
     <div class="wrap">
         <div class="btnWrap">
-            <div id="result" class="">
+            <div id="result">
                 <p class="score">Score: <em></em></p>
+                <p class="level">level: <em></em></p>
             </div>
             <ul>
                 <li class="heart"></li>
@@ -46,14 +41,10 @@
                 <li class="heart"></li>
             </ul>
             <div class="on"><p>ON</p></div>
+            <div class="levelUpBtn"><p>level Up</p></div>
         </div>
 
-        <div class="present one">
-        </div>
-        <div class="present two">
-        </div>
-        <div class="present three">
-        </div>
+        <div class="square square1"></div>
     </div>
 
 
@@ -61,58 +52,87 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-
             var count = 0;
             var score = 0;
-            var all = 3;
+            var level = 1;
+            var i = 1;
+
+            let levelResult = document.querySelector('.level>em');
+            levelResult.textContent = level;
 
             let result = document.querySelector('.score>em');
             result.textContent = score;
 
-            var oneBottom = Math.floor(Math.random() * 80) + 11;
-            var oneRight = Math.floor(Math.random() * 80) + 11;
-            var twoTop = Math.floor(Math.random() * 80) + 11;
-            var twoRight = Math.floor(Math.random() * 80) + 11;
-            var threeBottom = Math.floor(Math.random() * 80) + 11;
-            var threeLeft = Math.floor(Math.random() * 80) + 11;
-            $('.one').css('bottom', oneBottom + '%');
-            $('.one').css('right', oneRight + '%');
-            $('.two').css('top', twoTop + '%');
-            $('.two').css('right', twoRight + '%');
-            $('.three').css('bottom', threeBottom + '%');
-            $('.three').css('left', threeLeft + '%');
+            var square = $('square').get();
+
+            $('.square1').css('top', Math.floor(Math.random() * 70) + 21 + '%');
+            $('.square1').css('left', Math.floor(Math.random() * 78) + 13 + '%');
 
             $('.on').click(function() {
                 if (count < 5) {
-                    if (score == all) {
-                        alert("축하드립니다!\n모두 찾으셨습니다!");
+                    if (score == level) {
+                        levelUp();
                     } else {
                         ++count;
                         $('.heart:nth-last-child(' + count + ')').css('display', 'none');
                         $('body').css('background', '#fff');
-                        $('.score').css('color', '#000');
-                        $('.present:not(.click)').css('display', 'block');
+                        $('#result>p').css('color', '#000');
+                        $('.square:not(.click)').css('display', 'block');
                         setTimeout(function() {
                             $('body').css('background', '#000');
-                            $('.score').css('color', '#fff');
-                            $('.present').css('display', 'none');
+                            $('#result>p').css('color', '#fff');
+                            $('.square').css('display', 'none');
                         }, 1000);
                     }
-                } else if (score == all) {
-                    alert("축하드립니다!\n모두 찾으셨습니다!");
+                } else if (score == level) {
+                    levelUp();
                 } else {
                     alert("기회를 전부 소진했습니다.\nF5를 눌러 처음부터 다시 해주세요.");
                 }
             });
-            $('.present').click(function() {
+
+            $('.square').click(function() {
                 if (score >= 0) {
                     ++score;
                     $(this).css('display', 'none');
                     $(this).addClass('click');
                     result.textContent = score;
-
                 }
             });
+
+            function levelUp(){
+                alert("축하드립니다!\n모두 찾으셨습니다!");
+
+                $('.levelUpBtn').css('display', 'inline-block');
+                $('.levelUpBtn').click(function() {
+                    ++level;
+                    levelResult.textContent = level;
+                    $('.levelUpBtn').css('display', 'none');
+                    count = 0;
+                    $('.heart').css('display', 'inline-block');
+                    score = 0;
+                    result.textContent = score;
+                    $('.square').removeClass('click');
+
+                    var squareUp = document.querySelector('.wrap');
+                    var squarePlus = document.createElement( 'div' );
+                    squareUp.appendChild( squarePlus );
+                    $('.wrap>div:not(.btnWrap)').addClass('square');
+                    $('.wrap>div:last-child').addClass('square' + level);
+
+                    for (var i = 0; i = level; i++;) {
+                        var square = $('square').get();
+
+                        $('.square' + i).css('top', Math.floor(Math.random() * 70) + 21 + '%');
+                        $('.square' + i).css('left', Math.floor(Math.random() * 78) + 13 + '%');
+                    }
+
+                    var square = $('square').get();
+
+                });
+
+
+            };
         });
     </script>
 </body>
