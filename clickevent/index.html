@@ -123,12 +123,12 @@
                 $('.wrap>div:not(.btnWrap)').addClass('square');
                 $('.wrap>div:last-child').addClass('square' + level);
 
-                // for (var i = 0; i = level; i++) {
-                //     var square = $('square').get();
-                //
-                //     $('.square' + i).css('top', Math.floor(Math.random() * 70) + 21 + '%');
-                //     $('.square' + i).css('left', Math.floor(Math.random() * 78) + 13 + '%');
-                // }
+                for (var i = 1; i < level+1; i++) {
+                    var square = $('square').get();
+
+                    $('.square' + i).css('top', Math.floor(Math.random() * 70) + 21 + '%');
+                    $('.square' + i).css('left', Math.floor(Math.random() * 78) + 13 + '%');
+                }
 
                 var square = $('square').get();
 
