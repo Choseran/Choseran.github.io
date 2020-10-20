@@ -84,7 +84,7 @@
                             $('.square').css('display', 'none');
                         }, 1000);
                     }
-                } else if (score == level) {
+                } else if (score >= level) {
                     levelUp();
                 } else {
                     alert("기회를 전부 소진했습니다.\nF5를 눌러 처음부터 다시 해주세요.");
@@ -103,36 +103,33 @@
             function levelUp (){
                 alert("축하드립니다!\n모두 찾으셨습니다!");
                 $('.levelUpBtn').css('display', 'inline-block');
+                $('.levelUpBtn').click(function() {
+                    ++level;
+                    $('.heart').css('display', 'inline-block');
+                    levelResult.textContent = level;
+                    $('.levelUpBtn').css('display', 'none');
+                    count = 0;
+                    $('.heart').css('display', 'inline-block');
+                    score = 0;
+                    result.textContent = score;
+                    $('.square').removeClass('click');
+
+                    var squareUp = document.querySelector('.wrap');
+                    var squarePlus = document.createElement( 'div' );
+                    squareUp.appendChild( squarePlus );
+                    $('.wrap>div:not(.btnWrap)').addClass('square');
+                    $('.wrap>div:last-child').addClass('square' + level);
+
+                    for (var i = 1; i < level+1; i++) {
+                        var square = $('square').get();
+
+                        $('.square' + i).css('top', Math.floor(Math.random() * 70) + 21 + '%');
+                        $('.square' + i).css('left', Math.floor(Math.random() * 78) + 13 + '%');
+                    };
+                });
             }
 
 
-            $('.levelUpBtn').click(function() {
-                ++level;
-                $('.heart').css('display', 'inline-block');
-                levelResult.textContent = level;
-                $('.levelUpBtn').css('display', 'none');
-                count = 0;
-                $('.heart').css('display', 'inline-block');
-                score = 0;
-                result.textContent = score;
-                $('.square').removeClass('click');
-
-                var squareUp = document.querySelector('.wrap');
-                var squarePlus = document.createElement( 'div' );
-                squareUp.appendChild( squarePlus );
-                $('.wrap>div:not(.btnWrap)').addClass('square');
-                $('.wrap>div:last-child').addClass('square' + level);
-
-                for (var i = 1; i < level+1; i++) {
-                    var square = $('square').get();
-
-                    $('.square' + i).css('top', Math.floor(Math.random() * 70) + 21 + '%');
-                    $('.square' + i).css('left', Math.floor(Math.random() * 78) + 13 + '%');
-                }
-
-                var square = $('square').get();
-
-            });
 
 
         });
