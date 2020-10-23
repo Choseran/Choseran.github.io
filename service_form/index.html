@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>드림지원 서비스센터 상담 만족도 조사</title>
+        <style media="screen">
+            /* *{margin:0;padding:0;} */
+            ul{padding:0}
+            li{list-style:none}
+
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <dl class="question">
+                <dt>
+                    <p class="question1">1. 상담사는 친절했나요?</p>
+                </dt>
+                <dd>
+                    <ul>
+                        <li><input type="checkbox" name="one" value="a1" onclick="onlyOne(this)"> 친절함</li>
+                        <li><input type="checkbox" name="one" value="a2" onclick="onlyOne(this)"> 보통</li>
+                        <li><input type="checkbox" name="one" value="a3" onclick="onlyOne(this)"> 불친절</li>
+                    </ul>
+                </dd>
+                <dt>
+                    <p class="question2">2. 상담사가 추천해드린 드림 상품에 만족하시나요?</p>
+                </dt>
+                <dd>
+                    <ul>
+                        <li><input type="checkbox" name="two" value="b1" onclick="onlyTwo(this)"> 매우 만족</li>
+                        <li><input type="checkbox" name="two" value="b2" onclick="onlyTwo(this)"> 보통</li>
+                        <li><input type="checkbox" name="two" value="b3" onclick="onlyTwo(this)"> 불만족</li>
+                    </ul>
+                </dd>
+            </dl>
+            <button type="button" onclick="end()">완료</button>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            var one = document.getElementsByName("one");
+            var two = document.getElementsByName("two");
+
+            function onlyOne(a) {
+                for (var i = 0; i < one.length; i++) {
+                    if (one[i] != a) {one[i].checked = false;}
+                };
+            }
+            function onlyTwo(b) {
+                for (var i = 0; i < two.length; i++) {
+                    if (two[i] != b) {two[i].checked = false;}
+                };
+            }
+            function end() {
+                document.write("<div style='margin:0 auto;text-align:center'><h1>수고하셨습니다!</h1></br><h4 style='color:#9f9f9f;font-weight:200'>사실 이 결과의 데이터는 따로 저장되지 않습니다.</h4></div>");
+            }
+        </script>
+    </body>
+</html>
